@@ -3,1314 +3,312 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "agentpool1Count": {
-      "allowedValues": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
-      ],
-      "defaultValue": 3,
-      "metadata": {
-        "description": "The number of agents for the cluster.  This value can be from 1 to 100"
-      },
-      "type": "int"
-    },
-    "agentpool1Offset": {
-      "allowedValues": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99
-      ],
-      "defaultValue": 0,
-      "metadata": {
-        "description": "The offset into the agent pool where to start creating agents.  This value can be from 0 to 99, but must be less than agentCount"
-      },
-      "type": "int"
+      "value": 3
     },
     "agentpool1Subnet": {
-      "defaultValue": "10.240.0.0/12",
-      "metadata": {
-        "description": "Sets the subnet of agent pool 'agentpool1'."
-      },
-      "type": "string"
+      "value": "10.240.0.0/12"
     },
     "agentpool1VMSize": {
-      "allowedValues": [
-        "Standard_A0",
-        "Standard_A1",
-        "Standard_A10",
-        "Standard_A11",
-        "Standard_A1_v2",
-        "Standard_A2",
-        "Standard_A2_v2",
-        "Standard_A2m_v2",
-        "Standard_A3",
-        "Standard_A4",
-        "Standard_A4_v2",
-        "Standard_A4m_v2",
-        "Standard_A5",
-        "Standard_A6",
-        "Standard_A7",
-        "Standard_A8",
-        "Standard_A8_v2",
-        "Standard_A8m_v2",
-        "Standard_A9",
-        "Standard_B1ms",
-        "Standard_B1s",
-        "Standard_B2ms",
-        "Standard_B2s",
-        "Standard_B4ms",
-        "Standard_B8ms",
-        "Standard_D1",
-        "Standard_D11",
-        "Standard_D11_v2",
-        "Standard_D11_v2_Promo",
-        "Standard_D12",
-        "Standard_D12_v2",
-        "Standard_D12_v2_Promo",
-        "Standard_D13",
-        "Standard_D13_v2",
-        "Standard_D13_v2_Promo",
-        "Standard_D14",
-        "Standard_D14_v2",
-        "Standard_D14_v2_Promo",
-        "Standard_D15_v2",
-        "Standard_D16_v3",
-        "Standard_D16s_v3",
-        "Standard_D1_v2",
-        "Standard_D2",
-        "Standard_D2_v2",
-        "Standard_D2_v2_Promo",
-        "Standard_D2_v3",
-        "Standard_D2s_v3",
-        "Standard_D3",
-        "Standard_D32_v3",
-        "Standard_D32s_v3",
-        "Standard_D3_v2",
-        "Standard_D3_v2_Promo",
-        "Standard_D4",
-        "Standard_D4_v2",
-        "Standard_D4_v2_Promo",
-        "Standard_D4_v3",
-        "Standard_D4s_v3",
-        "Standard_D5_v2",
-        "Standard_D5_v2_Promo",
-        "Standard_D64_v3",
-        "Standard_D64s_v3",
-        "Standard_D8_v3",
-        "Standard_D8s_v3",
-        "Standard_DS1",
-        "Standard_DS11",
-        "Standard_DS11_v2",
-        "Standard_DS11_v2_Promo",
-        "Standard_DS12",
-        "Standard_DS12_v2",
-        "Standard_DS12_v2_Promo",
-        "Standard_DS13",
-        "Standard_DS13-2_v2",
-        "Standard_DS13-4_v2",
-        "Standard_DS13_v2",
-        "Standard_DS13_v2_Promo",
-        "Standard_DS14",
-        "Standard_DS14-4_v2",
-        "Standard_DS14-8_v2",
-        "Standard_DS14_v2",
-        "Standard_DS14_v2_Promo",
-        "Standard_DS15_v2",
-        "Standard_DS1_v2",
-        "Standard_DS2",
-        "Standard_DS2_v2",
-        "Standard_DS2_v2_Promo",
-        "Standard_DS3",
-        "Standard_DS3_v2",
-        "Standard_DS3_v2_Promo",
-        "Standard_DS4",
-        "Standard_DS4_v2",
-        "Standard_DS4_v2_Promo",
-        "Standard_DS5_v2",
-        "Standard_DS5_v2_Promo",
-        "Standard_E16_v3",
-        "Standard_E16s_v3",
-        "Standard_E2_v3",
-        "Standard_E2s_v3",
-        "Standard_E32-16s_v3",
-        "Standard_E32-8s_v3",
-        "Standard_E32_v3",
-        "Standard_E32s_v3",
-        "Standard_E4_v3",
-        "Standard_E4s_v3",
-        "Standard_E64-16s_v3",
-        "Standard_E64-32s_v3",
-        "Standard_E64_v3",
-        "Standard_E64s_v3",
-        "Standard_E8_v3",
-        "Standard_E8s_v3",
-        "Standard_F1",
-        "Standard_F16",
-        "Standard_F16s",
-        "Standard_F16s_v2",
-        "Standard_F1s",
-        "Standard_F2",
-        "Standard_F2s",
-        "Standard_F2s_v2",
-        "Standard_F32s_v2",
-        "Standard_F4",
-        "Standard_F4s",
-        "Standard_F4s_v2",
-        "Standard_F64s_v2",
-        "Standard_F72s_v2",
-        "Standard_F8",
-        "Standard_F8s",
-        "Standard_F8s_v2",
-        "Standard_G1",
-        "Standard_G2",
-        "Standard_G3",
-        "Standard_G4",
-        "Standard_G5",
-        "Standard_GS1",
-        "Standard_GS2",
-        "Standard_GS3",
-        "Standard_GS4",
-        "Standard_GS4-4",
-        "Standard_GS4-8",
-        "Standard_GS5",
-        "Standard_GS5-16",
-        "Standard_GS5-8",
-        "Standard_H16",
-        "Standard_H16m",
-        "Standard_H16mr",
-        "Standard_H16r",
-        "Standard_H8",
-        "Standard_H8m",
-        "Standard_L16s",
-        "Standard_L32s",
-        "Standard_L4s",
-        "Standard_L8s",
-        "Standard_M128-32ms",
-        "Standard_M128-64ms",
-        "Standard_M128ms",
-        "Standard_M128s",
-        "Standard_M64-16ms",
-        "Standard_M64-32ms",
-        "Standard_M64ms",
-        "Standard_M64s",
-        "Standard_NC12",
-        "Standard_NC12s_v2",
-        "Standard_NC12s_v3",
-        "Standard_NC24",
-        "Standard_NC24r",
-        "Standard_NC24rs_v2",
-        "Standard_NC24rs_v3",
-        "Standard_NC24s_v2",
-        "Standard_NC24s_v3",
-        "Standard_NC6",
-        "Standard_NC6s_v2",
-        "Standard_NC6s_v3",
-        "Standard_ND12s",
-        "Standard_ND24rs",
-        "Standard_ND24s",
-        "Standard_ND6s",
-        "Standard_NV12",
-        "Standard_NV24",
-        "Standard_NV6"
-      ],
-      "defaultValue": "Standard_D2_v2",
-      "metadata": {
-        "description": "The size of the Virtual Machine."
-      },
-      "type": "string"
+      "value": "Standard_D2_v2"
     },
     "agentpool1osImageOffer": {
-      "defaultValue": "UbuntuServer",
-      "metadata": {
-        "description": "Linux OS image type."
-      },
-      "type": "string"
+      "value": "UbuntuServer"
     },
     "agentpool1osImagePublisher": {
-      "defaultValue": "Canonical",
-      "metadata": {
-        "description": "OS image publisher."
-      },
-      "type": "string"
+      "value": "Canonical"
     },
     "agentpool1osImageSKU": {
-      "defaultValue": "16.04-LTS",
-      "metadata": {
-        "description": "OS image SKU."
-      },
-      "type": "string"
+      "value": "16.04-LTS"
     },
     "agentpool1osImageVersion": {
-      "defaultValue": "16.04.201801260",
-      "metadata": {
-        "description": "OS image version."
-      },
-      "type": "string"
+      "value": "16.04.201801260"
     },
     "apiServerCertificate": {
-      "metadata": {
-        "description": "The base 64 server certificate used on the master"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSU5CVENDQ3UyZ0F3SUJBZ0lSQVBJajJnZTJaYWlwUm8zZjYwWTlGWDh3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTVRnd05ERTVNVGMwTnpJd1doY05NakF3TkRFNE1UYzBOekl3V2pBVQpNUkl3RUFZRFZRUURFd2xoY0dselpYSjJaWEl3Z2dJaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQ0R3QXdnZ0lLCkFvSUNBUURGSCtiTFVYTUxyZU92Z3VpQ3VlTVFLLzVEZWV3TFNpSEU2T2U0RDZIanFkczVSNjh6cnhQR21BWWMKdS9yTmNxZzZEOFVaOGg2em1NNmxzVlNIbnVpVTA1d3N5UVNJTy9HYkR4WlRFdTIwL2JJN3prWGVoYmJrZ0dXawpsSG5wS2o4OTZrbmRxVXI5ZWczdWpTYitUd29uZ1NNL0UvdElzdzdJU2JoTllYbGZnSVArM1RwbVcrNGlpd2UxCmZkbWVrV3oxdXpMdkJNMjd2eGVYSmN0bkpjTnJLRnlHYWRHaEFiTDFmdHVFeTF3aS9GYWNLakwrMFl2TVZNcDcKbHFMQU9BL0Z1YmplS2FtVDlqSXY3MFduNkYraVBlY1JTZDVnNGxFTWxMNlFGUEpJb2lwZjNGSllnY1BkT3ZacwpZa1ZMYU5nUE9OTWJ2RDZzNjgvT2ZsSXg1Z2lsd3IrV3Fla0xqekkvcE5YLzR2WTJXNkZCQjg3bFFabWtNT2tlCkh1Vy9MYXlPQy9SY1c0dFlERlg0Wi9vaWFQaWoyN08wVDhsVEx1RlY3TXhzLzRhb2I5cW9oK1E0ZEo4NVJyVkEKcEsyeVVmUzFCQkNJOFdPZkpCcC9PUzQrTlZoMGJNSU5nQ1Z1cjZ3YXRvUzgzd2FMKytDYTVQNXhBZDlOTGRKcApEc25PUWpZd3pIcHJuUDQ5N2x4bzZrcEV2ZGdyOEV3WEp3WlZiQUZVaUVZTFk4VlF4NTh4aCt2WWYwL0V1RzRKCllNK0cxN1l1clBSeU5pSXF1RXYwNEE3UkI0Zm8zUWhTVHRacDNkZW9zcDZUNzgxUHFYVlE4bS9IbU41SGZtTW8KUTZiQ0tad2pVQUs2bkZpYUpkWnZJN2Y1T0RWN01PeXdoQWVBNUU5QUgvMzAvZDhRYlFJREFRQUJvNElJVnpDQwpDRk13RGdZRFZSMFBBUUgvQkFRREFnV2dNQk1HQTFVZEpRUU1NQW9HQ0NzR0FRVUZCd01CTUF3R0ExVWRFd0VCCi93UUNNQUF3Z2dnY0JnTlZIUkVFZ2dnVE1JSUlENEl1WVhKamFHbDBaV05vTFdzNGN5NWhkWE4wY21Gc2FXRmwKWVhOMExtTnNiM1ZrWVhCd0xtRjZkWEpsTG1OdmJZSXpZWEpqYUdsMFpXTm9MV3M0Y3k1aGRYTjBjbUZzYVdGegpiM1YwYUdWaGMzUXVZMnh2ZFdSaGNIQXVZWHAxY21VdVkyOXRnaXhoY21Ob2FYUmxZMmd0YXpoekxtSnlZWHBwCmJITnZkWFJvTG1Oc2IzVmtZWEJ3TG1GNmRYSmxMbU52YllJdVlYSmphR2wwWldOb0xXczRjeTVqWVc1aFpHRmoKWlc1MGNtRnNMbU5zYjNWa1lYQndMbUY2ZFhKbExtTnZiWUlyWVhKamFHbDBaV05vTFdzNGN5NWpZVzVoWkdGbApZWE4wTG1Oc2IzVmtZWEJ3TG1GNmRYSmxMbU52YllJdFlYSmphR2wwWldOb0xXczRjeTVqWlc1MGNtRnNhVzVrCmFXRXVZMnh2ZFdSaGNIQXVZWHAxY21VdVkyOXRnaXBoY21Ob2FYUmxZMmd0YXpoekxtTmxiblJ5WVd4MWN5NWoKYkc5MVpHRndjQzVoZW5WeVpTNWpiMjJDTG1GeVkyaHBkR1ZqYUMxck9ITXVZMlZ1ZEhKaGJIVnpaWFZoY0M1agpiRzkxWkdGd2NDNWhlblZ5WlM1amIyMkNNV0Z5WTJocGRHVmphQzFyT0hNdVkyaHBibUZsWVhOMExtTnNiM1ZrCllYQndMbU5vYVc1aFkyeHZkV1JoY0drdVkyNkNNbUZ5WTJocGRHVmphQzFyT0hNdVkyaHBibUZ1YjNKMGFDNWoKYkc5MVpHRndjQzVqYUdsdVlXTnNiM1ZrWVhCcExtTnVnaWxoY21Ob2FYUmxZMmd0YXpoekxtVmhjM1JoYzJsaApMbU5zYjNWa1lYQndMbUY2ZFhKbExtTnZiWUluWVhKamFHbDBaV05vTFdzNGN5NWxZWE4wZFhNdVkyeHZkV1JoCmNIQXVZWHAxY21VdVkyOXRnaWhoY21Ob2FYUmxZMmd0YXpoekxtVmhjM1IxY3pJdVkyeHZkV1JoY0hBdVlYcDEKY21VdVkyOXRnaXhoY21Ob2FYUmxZMmd0YXpoekxtVmhjM1IxY3pKbGRXRndMbU5zYjNWa1lYQndMbUY2ZFhKbApMbU52YllJcVlYSmphR2wwWldOb0xXczRjeTVxWVhCaGJtVmhjM1F1WTJ4dmRXUmhjSEF1WVhwMWNtVXVZMjl0CmdpcGhjbU5vYVhSbFkyZ3Rhemh6TG1waGNHRnVkMlZ6ZEM1amJHOTFaR0Z3Y0M1aGVuVnlaUzVqYjIyQ0xXRnkKWTJocGRHVmphQzFyT0hNdWEyOXlaV0ZqWlc1MGNtRnNMbU5zYjNWa1lYQndMbUY2ZFhKbExtTnZiWUlyWVhKagphR2wwWldOb0xXczRjeTVyYjNKbFlYTnZkWFJvTG1Oc2IzVmtZWEJ3TG1GNmRYSmxMbU52YllJdllYSmphR2wwClpXTm9MV3M0Y3k1dWIzSjBhR05sYm5SeVlXeDFjeTVqYkc5MVpHRndjQzVoZW5WeVpTNWpiMjJDTEdGeVkyaHAKZEdWamFDMXJPSE11Ym05eWRHaGxkWEp2Y0dVdVkyeHZkV1JoY0hBdVlYcDFjbVV1WTI5dGdpOWhjbU5vYVhSbApZMmd0YXpoekxuTnZkWFJvWTJWdWRISmhiSFZ6TG1Oc2IzVmtZWEJ3TG1GNmRYSmxMbU52YllJdVlYSmphR2wwClpXTm9MV3M0Y3k1emIzVjBhR1ZoYzNSaGMybGhMbU5zYjNWa1lYQndMbUY2ZFhKbExtTnZiWUlyWVhKamFHbDAKWldOb0xXczRjeTV6YjNWMGFHbHVaR2xoTG1Oc2IzVmtZWEJ3TG1GNmRYSmxMbU52YllJb1lYSmphR2wwWldObwpMV3M0Y3k1MWEzTnZkWFJvTG1Oc2IzVmtZWEJ3TG1GNmRYSmxMbU52YllJbllYSmphR2wwWldOb0xXczRjeTUxCmEzZGxjM1F1WTJ4dmRXUmhjSEF1WVhwMWNtVXVZMjl0Z2k1aGNtTm9hWFJsWTJndGF6aHpMbmRsYzNSalpXNTAKY21Gc2RYTXVZMnh2ZFdSaGNIQXVZWHAxY21VdVkyOXRnaXRoY21Ob2FYUmxZMmd0YXpoekxuZGxjM1JsZFhKdgpjR1V1WTJ4dmRXUmhjSEF1WVhwMWNtVXVZMjl0Z2lwaGNtTm9hWFJsWTJndGF6aHpMbmRsYzNScGJtUnBZUzVqCmJHOTFaR0Z3Y0M1aGVuVnlaUzVqYjIyQ0oyRnlZMmhwZEdWamFDMXJPSE11ZDJWemRIVnpMbU5zYjNWa1lYQncKTG1GNmRYSmxMbU52YllJb1lYSmphR2wwWldOb0xXczRjeTUzWlhOMGRYTXlMbU5zYjNWa1lYQndMbUY2ZFhKbApMbU52YllJeFlYSmphR2wwWldOb0xXczRjeTVqYUdsdVlXVmhjM1F1WTJ4dmRXUmhjSEF1WTJocGJtRmpiRzkxClpHRndhUzVqYm9JeVlYSmphR2wwWldOb0xXczRjeTVqYUdsdVlXNXZjblJvTG1Oc2IzVmtZWEJ3TG1Ob2FXNWgKWTJ4dmRXUmhjR2t1WTI2Q04yRnlZMmhwZEdWamFDMXJPSE11WjJWeWJXRnVlV05sYm5SeVlXd3VZMnh2ZFdSaApjSEF1YldsamNtOXpiMlowWVhwMWNtVXVaR1dDT1dGeVkyaHBkR1ZqYUMxck9ITXVaMlZ5YldGdWVXNXZjblJvClpXRnpkQzVqYkc5MVpHRndjQzV0YVdOeWIzTnZablJoZW5WeVpTNWtaWUkyWVhKamFHbDBaV05vTFdzNGN5NTEKYzJkdmRuWnBjbWRwYm1saExtTnNiM1ZrWVhCd0xuVnpaMjkyWTJ4dmRXUmhjR2t1Ym1WMGdqSmhjbU5vYVhSbApZMmd0YXpoekxuVnpaMjkyYVc5M1lTNWpiRzkxWkdGd2NDNTFjMmR2ZG1Oc2IzVmtZWEJwTG01bGRJSTFZWEpqCmFHbDBaV05vTFdzNGN5NTFjMmR2ZG1GeWFYcHZibUV1WTJ4dmRXUmhjSEF1ZFhObmIzWmpiRzkxWkdGd2FTNXUKWlhTQ00yRnlZMmhwZEdWamFDMXJPSE11ZFhObmIzWjBaWGhoY3k1amJHOTFaR0Z3Y0M1MWMyZHZkbU5zYjNWawpZWEJwTG01bGRJSXVZWEpqYUdsMFpXTm9MV3M0Y3k1bWNtRnVZMlZqWlc1MGNtRnNMbU5zYjNWa1lYQndMbUY2CmRYSmxMbU52YllJS2EzVmlaWEp1WlhSbGM0SVNhM1ZpWlhKdVpYUmxjeTVrWldaaGRXeDBnaFpyZFdKbGNtNWwKZEdWekxtUmxabUYxYkhRdWMzWmpnaVJyZFdKbGNtNWxkR1Z6TG1SbFptRjFiSFF1YzNaakxtTnNkWE4wWlhJdQpiRzlqWVd5Q0ZtdDFZbVZ5Ym1WMFpYTXVhM1ZpWlMxemVYTjBaVzJDR210MVltVnlibVYwWlhNdWEzVmlaUzF6CmVYTjBaVzB1YzNaamdpaHJkV0psY201bGRHVnpMbXQxWW1VdGMzbHpkR1Z0TG5OMll5NWpiSFZ6ZEdWeUxteHYKWTJGc2h3UUsvLzhGaHdRSy8vOFBod1FLQUFBQk1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQ0FRQzVQVlNYUHlsaApoYzZZVHV0b09JMGZicmpFWmFDSXpLYnFmUm1OSkVNUzRyWnVPZnByTUFWRlp0cTdScVJ1L2sxVDAydlViV25yCkx6UTV2RE9aVW5QMlVGQldPNDI0MmwxVWxnMTV5eks1T0lZckdDb0VOdEdnRzMrWFlGRHV6VHBsRU1BMUgyQ2cKNjdGejd6WkFpaFNxTzlHdWRRMEJialorakFHR21JdTdXYUNJWDc5YVIzTkdyMzc1NWZ5blZoc2RxZ01VaVgvVQpMTWlXc3hzOExDYzM1Qk5UZHUyc2x4eFp6S0pHalRJTG5RMTIwWWFnTTFtektBdDlTdFZwVGVrQ2NUeDh3SGIrClY1d2xFNXdoN1kyZkZMWmNDYnp1YzZadS9xaXlneG5US1RzVUFjUlZhNUhIcmt5Qk9pWWJvTHpLWlJyWk02RmoKZlp6ZnBaODNpZkQ4dGhrQ1BZdkp5TmhENWZtbFluMmFtUGRxbXFlUE9UdmtQdFFSc2xLemZHOHNKQ0FsZ1kwcQplVXY4U2orOE1XcytTZllMeFRsQ3lPNGtvc3RFOGNRaHNTSFZHRUVJVUJEN0xOa1h5SytESFdLSUUrckJqdTYwCjNhZUVVODJheTF4azZ3L2pVTWtHZ3NqWm5CdHpkSEE4RHh1NUlZdVhMWjRoeXVrSHk5N2ZuZWFCMENhTCtleGgKUUNKb3NxYkFacXFHL014SUc0UlJZdXZLRlgveGMwcW9DT0wrQVZyQk9FTTRHeTI2OTdReWVNdVNaUS8xNUpOTQorMUZtdEdlaW5BbmN1RTIrSDlqMmpYN3NSTStkTGsyUFdMQjBmTlhTaDQ0Mk1LcmYzcEdOQkVVYk1TYmZacStMClp5TVRINmJ6TDRrMzNTZkxoWEN6TTdTcDc2TXZPUUpkV2c9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
     },
     "apiServerPrivateKey": {
-      "metadata": {
-        "description": "The base 64 server private key used on the master."
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBeFIvbXkxRnpDNjNqcjRMb2dybmpFQ3YrUTNuc0Mwb2h4T2pudUEraDQ2bmJPVWV2Ck02OFR4cGdHSEx2NnpYS29PZy9GR2ZJZXM1ak9wYkZVaDU3b2xOT2NMTWtFaUR2eG13OFdVeEx0dFAyeU84NUYKM29XMjVJQmxwSlI1NlNvL1BlcEozYWxLL1hvTjdvMG0vazhLSjRFalB4UDdTTE1PeUVtNFRXRjVYNENEL3QwNgpabHZ1SW9zSHRYM1pucEZzOWJzeTd3VE51NzhYbHlYTFp5WERheWhjaG1uUm9RR3k5WDdiaE10Y0l2eFduQ295Ci90R0x6RlRLZTVhaXdEZ1B4Ym00M2ltcGsvWXlMKzlGcCtoZm9qM25FVW5lWU9KUkRKUytrQlR5U0tJcVg5eFMKV0lIRDNUcjJiR0pGUzJqWUR6alRHN3crck92UHpuNVNNZVlJcGNLL2xxbnBDNDh5UDZUVi8rTDJObHVoUVFmTwo1VUdacEREcEhoN2x2eTJzamd2MFhGdUxXQXhWK0dmNkltajRvOXV6dEUvSlV5N2hWZXpNYlArR3FHL2FxSWZrCk9IU2ZPVWExUUtTdHNsSDB0UVFRaVBGam55UWFmemt1UGpWWWRHekNEWUFsYnErc0dyYUV2TjhHaS92Z211VCsKY1FIZlRTM1NhUTdKemtJMk1NeDZhNXorUGU1Y2FPcEtSTDNZSy9CTUZ5Y0dWV3dCVkloR0MyUEZVTWVmTVlmcgoySDlQeExodUNXRFBodGUyTHF6MGNqWWlLcmhMOU9BTzBRZUg2TjBJVWs3V2FkM1hxTEtlaysvTlQ2bDFVUEp2Cng1amVSMzVqS0VPbXdpbWNJMUFDdXB4WW1pWFdieU8zK1RnMWV6RHNzSVFIZ09SUFFCLzk5UDNmRUcwQ0F3RUEKQVFLQ0FnQmc2QS96di9USXR4R0poTmQ4L0prdHFCTDFaUWl2ZkNBaHgwV3k3S3h2V1Y5V1IzRlAvUy9CbjViUgpwVy9rZEF0VGo5RWJzalY1b1JObHpVbDY2cG40SUJkVXhQV2ZhNmlZeTgvend3aHN3NU5OWjFoZHptcGM1dW9SCkFKVDJGVGpGM1ZtMnlMVCs2M1BSNUQ1WklzNGhJWkVNUDJ4M0R0K2pndXBCMER0MHdaOGlPZXV0eWwvRlI0ZmcKcHgvR25rTnNnanpGMkJ5endYdDlhSzBYNWk2dGpVZi9KQ0pUL3B2VnFDbU9uTktNdUhSempTTkl0Z2I5eW1sSQpYSU5oNzYyQlRJNGZXV2Z1UDBmbzNMM25qNHNFSFY1czExMmxUMXo4ekZycVJnSGR4eXNCdVRRYUlxRUJMeTFaCmx1M3Q1bnJnOE5TSGZBRnJ6UGw1MEF2a1QrdkxoRW9kOFVTYjNPdXp4Nk03bEpsSVVUYXZDK2p2Z1B0cGtOOUgKbGJmYkhzODUzS2d6RytJYjdsdmtHRzM0dk94K3c2NmZVekZGNU9ETmYvQVZmLytPR0d4RU52enUxMXl6Q0FWNQo1TWZPMVd2a2JSMG44ZEI2cGE2T1VydlZQQnVVNFNYekNFWXJac0RIZTNITm1SVVdibzkrOGpYdjgwOXMydmVLCnlha0h0aWZRZE5HL1lIRWttUE9KUldVNG83N2llWC9nb21EUXYySm9zU05DRzBLcFhKb3ZmcG1WNWlaRURZUUgKaCtaSlFpNWdIeXY5cDlDNklJbWhHdlV0dkVodnd2dmpzSytVUjJhVFJCOUpsOWNRZUFNaXlXNVJTQ1ZCWGhUOQpkcXorL1ZFL1VyWTJXemd4THl5ZEJkRVdhSlVoblA1eE1JdlM2cThXc05Pam5rNlFHUUtDQVFFQTdINEJTL2MrClp6NTV0ZGFJT1drdWlYNThuVHI5bksrbk9hY0ZMNkJGYnBxOE5yV0hNRzNWRnpYRzE4TmZxYmRWQnRPOVIvdFAKYlFjemUxNDR0YnpZRGV1R282NkQ0Q0ZOYXhDaDN0Y2RUVk04a3BVZ2dESDh0akcrNEoxYUVQbzEwLzJGb3BCeApzWUVnU25hQVlsR2l5bXhkYmlydWxabUsxeXIwd29VWHVRMDk3RHAyd3pXNUlzYW5xalR4bVdsOWNFSGlENldtCjNOQXZKSkpXdzE4clorNmRxSmtXajllMjVJemJUbWZlOGFHL3lsT004QmFKaS9GQVlXMTBIVmtlNjMwKytUcncKQjc4UjZTamM1cFVXMnRMdEMyMy9ZSUJTNGZJaFdHc3V0WlI4Uk5seEl6b2FaVFZpUmdVOFRxTFVNdm9FZ3YvdAo2cTk5Y0VmOU9PMGM5d0tDQVFFQTFXS1NwNFRXc2VGTktXQkpQbThKR3FoaUJwNXVDcER4UUZwODBucmhpOENmCm1hS1NNekhLZDNTUEtjSmtaQWJZUHZrVThMR0RITWR4WHhoQUZFblNPZVpqQ2FBdWIzL2pobVZPNWgzZ0lPbUsKYkx2WEx4akdzV2hndXlRazd1TE9PSEQ0ZE96alZoUmN4amNSMjhQKys4bktDM2h5MHI5VVlXVE9hUkRReTU5Ngo5OENJOGI1dlkybmdRM3J2cnlPam5IdTRrOWlibldQWEVBeGJEbjJwSzNrZFhJYVRtT096K2ozYUxoTHBjczNXCjhxMmlXdVJ3NW1hY1hjZWtBTGRFU0dEa3ZEbmdpVzF5RWsyYlE2SG1SZGRtRXpXQkNaUFZGay81ejVQVFVkUTQKeFdxSHJZcW5yWE1LeCtEQ05QdVppK3lkblRpdkVWR1A3Y2dFYjNwWXV3S0NBUUVBbm8vNWhKcVliNWJXK2hHRwpNcUFRUU1YYS9YekE4RjVoaStrdE0vcU1zeFR5WHVnbFpWWXV5cW9XMFRIQW9VVTNzQ1Vsd3U2QUdZVDdncHJ4CkFRRkdCMGRFZGRpYnVSbjdFMjhLYVNQb0ZLRmJlcGljT3ZmSkRjdWF4SFVjSDBmejhWZ0pVcTd3VytoTTQwQkMKNGlrRU1oNm9JaWFNNHljWWpSM1REOTAydzY5YU5sb1lxTmdMY29LcGhoaUxhS1h2SWVZNmtPMHJUT0FVeTd1RwppdVh6YjNMd3FFdEVjbHRhMkRDTkZpdlVza1FXR0swZVVSZDdUNllJMllvT2tXTGd0Vm03Y0ZXUS9GQ2l6S2JHClBaLzJ1Kzh5V2poOVFwR25nTERjcExEd2wzU2dRWFZkUXhaQS9semxzRGJ3Y1hVQk85Q2dWOGtMRnhCazFYU2YKRnB6OGp3S0NBUUVBd2lsMGltdU1NOFZ2UWJQMFVaUVZNNlY5dE1vYUZSRTRCRGVTRnE5clpZKzdhYitNeW5xRwo0VlUxSTJsWGtkRE1tZGhwbm0zWGdLdFYxSktyVkFxcitMVlM3cUpMUG5lZkgxNDFnWnd6b1o3L3J0cm8vVmpOCkN3YVA1aGtJWmpvSUxVRldRb1orZ1lmN3R2ekxDaTU0YU1GL1VCcWtXSEZ5SlVEbHRLSnhhcWJON0h2TDREUkoKQkt1RlBjR3lNS244S05wRzVIaVhlSW90V2RQMFV1WXl0WFQ2SzRQazc1eFoydHpIRjE5ci9tT2dMNmVnOEpXbQp5VzhhM3haV2U3Ukd0Sms5Nkt1OVRTOUNPYmRXRFI5VytidjZqSVlGeVNJMEpaNVdEL1JSdDhha2RiWHVpUkYrCmE0d2ZoaXBVYklOM2Z1T3Bzekt0MGRObVpKVzR1M3NYR3dLQ0FRQkVaQktjRXViMlVGWTdYcXprK3JIVGF6SnIKbEVjOFBldmVvMGxYdHdxeEhxcCtEMUI3TkZJblNDdllvNUxzVlJ3cDVQcWFWK3dZQjNwTXJyWStlQnNpUG5wcAo5R05qNUY4NzN4bFlHR3lZeTVReVBCOE45SVJDSVNQcmV3bTR3UlpjZ2s5TEVoMTFuZ0QwZmRUNDdMWUlmR25uCjVFS0RTN3prY24zWHhCQUZBdUNIVlNHS21MaGh3K1ROWnlaZU1vSE16c2wzR09HT2x6MWdkUTg5VEQvVFB1YVkKN2g3dWM3dzhPdE9RUkFOTTA2NVlFN3E2NjhkM3MxaExlb3J2S3lVNFNRQ0tBTlFKWW5nUXFHNzlJdm9iY3JQeQozSmFaRGp0Y2VUOHNSUFhyLzhBQk5tb2hTU1FzRlJLK1h4M29lWGpaTTJmOGtjSVUrdjFqb3NOSFljMHMKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "caCertificate": {
-      "metadata": {
-        "description": "The base 64 certificate authority certificate"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUV4ekNDQXErZ0F3SUJBZ0lRWU9LeEErODB6NlNTSThwcTltMC9BakFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB4T0RBME1Ua3hOelEzTVRSYUZ3MHlNREEwTVRneE56UTNNVFJhTUEweApDekFKQmdOVkJBTVRBbU5oTUlJQ0lqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FnOEFNSUlDQ2dLQ0FnRUF2bjNaCldPVTdnTXdjNENpc3h0WG82YW5kVjd4VXU3QnRCREx6dFpvVzRCcDI5S1N5TUlVa3VNblo1b1UxYW9pVFJiMG0KTSt5Vkx3bUM4aENYZTFhaGJVdFN4NWRQNTdqdlJwMmtNZ1hZUi9HTG5XQkNaMG4raXNNMHZtOW03bldPdllVMApTTis5R3pjRHpJUmQ3elJhcjVZMTRGT2FyVWtTOU1sbkgzcGMwRlJnS2hpOTdnYXRGbmVPSmVYU2wxTmk1c3hwCkRPeUxqdldWRmp3MS9Ja2tvUUtVMytKQVJmaUlRa2xIcStYQnl4K2RMQjdHMWd6eThSZ0JJU09xY0NUVVgwUEIKK1BUQVBuOFhSRlIyaDZoSlVmOWVtMWsxMTNnYytNekF6VmVxNEdMWWN5dGY0dEJZNlBva2tLd0s2YlJxMndjUQpObU9IaEhURUowN3cvNWJONmRLK0Q1ZkpEdzd5U0c1Q3RhQzlWdXV2OHJqTkN4L0VaUmM5bDZyYzFRU25BeW5rCmJSRXNVNmgzVFZHcVZhQUxhK0U5b0QxcVIweEZsQjQ4UFZXb1o3MnR4Q05EM3AxNDkxbzdaUUxFamNzT2tJZS8KYWtNVXJYZXhZKzZCNHBUOUxTT1krdWpZcE1qWE5uUEw5Vms1S2dDbW1pREFyZExiREhnYzN3eno2OU1LdjZJbApLaDlBenlyNCtFY0ZaZTVPTzBUZzdEUi8zc2Y2WkpPbTJpTkNLMEVEL092K2pnVkx6QkpqZTBuMnV5Q2NNajZLCmlOSHo0eGpCcDNvWURUaWNuNVRwekhTZWIyOHVrOEpqeGQvR3lTTmNpQXJQTGNVZ2RYczNWNWhvdlRBK3VSWnUKMlgyVXZudUZwRWNoNk5ja0xhOTFSMFI0aXZteVdwRkRTTSsxWFMwQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFILwpCQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dJQkFEd1ZtMDRnCmU1Ym93VzVUaWVBWGd4TlRFZk1abms3TW1aRUU2Y2dpQlZrOHFNSkdpNFdrYzdIYldDRk13RVBIQzZhYmNZUXUKalZBS0NGemZhb0llNHo2Z2RMZ0VZQ1FIdnNBQ0tRWjJ3RENRUlY4ZUY0RTlzZFJMK1ZzVWx2U1ZBMGlSM3pJQwpxbHQrWWJIL29ZMS85aURyeEpFT1FRdlhrM0pGTGg2aGI0Wk5tczl0Q1ZXdlUwcE9RQ1VmUEdSVHpxSGYvQU5FCitReHJjUGU5aDU2RllaZjZuSTRKcml2NTN1YzYrY0FMTnB1azc0dm9abm9FcVFLdzVNT0NjdmVteW4yZXQ4c2MKUGFuZm9IbHlCN3hUNU82N1BzRmxpZWMyRm9aU2ZuTnhsZXRQN0dSTWluKzcxSmxnQ2J5N3JnMDhWN2NYTUNNNwpLcThMNS9jWmZyL0N6WENIUUlSeDVwVDlzNldlRjN2bXhZNmttRUxKOHpscnEyWFdLbTVKUUNxQWpiUDl3UC9XCm5CMEo1M1dGZ1NJRVVFOWhxVUNjZkEzamh1SWVxcFp3ZmNzUHV1NHR2dWJjWlZjUFNwNjlWOU9UanpkeWFDSmYKZklDeG1nZzRUMmZRVS8vd1FjOTZSQ25XNkRqckdLdXIwcGRabEMxVXpiNTA0R3hORDVjQ1kxTFMzaWFVM2wvQQplUTBUM3l1TFdGR3c2RSsvYUFkYlJKYWZ1czN6YzNHTEExekpnekV2ZXdEV3VZd1pSQ05VeENlL3BHT1JpYk5JCk5OeXNBRzBMZis2cXFmMGxURUw0RWUyQ0I4ZXZyaGkxSmJXYmo3M0hYOGJuTUlsUzZaZmRDZU45azlJdGd2ZUMKdU9DOHRkOUErbE5NZ1YzampBQ1JOdkhEZnpkU2d0VWVHMUNnCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
     },
     "caPrivateKey": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The base 64 CA private key used on the master."
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBdm4zWldPVTdnTXdjNENpc3h0WG82YW5kVjd4VXU3QnRCREx6dFpvVzRCcDI5S1N5Ck1JVWt1TW5aNW9VMWFvaVRSYjBtTSt5Vkx3bUM4aENYZTFhaGJVdFN4NWRQNTdqdlJwMmtNZ1hZUi9HTG5XQkMKWjBuK2lzTTB2bTltN25XT3ZZVTBTTis5R3pjRHpJUmQ3elJhcjVZMTRGT2FyVWtTOU1sbkgzcGMwRlJnS2hpOQo3Z2F0Rm5lT0plWFNsMU5pNXN4cERPeUxqdldWRmp3MS9Ja2tvUUtVMytKQVJmaUlRa2xIcStYQnl4K2RMQjdHCjFnenk4UmdCSVNPcWNDVFVYMFBCK1BUQVBuOFhSRlIyaDZoSlVmOWVtMWsxMTNnYytNekF6VmVxNEdMWWN5dGYKNHRCWTZQb2trS3dLNmJScTJ3Y1FObU9IaEhURUowN3cvNWJONmRLK0Q1ZkpEdzd5U0c1Q3RhQzlWdXV2OHJqTgpDeC9FWlJjOWw2cmMxUVNuQXlua2JSRXNVNmgzVFZHcVZhQUxhK0U5b0QxcVIweEZsQjQ4UFZXb1o3MnR4Q05ECjNwMTQ5MW83WlFMRWpjc09rSWUvYWtNVXJYZXhZKzZCNHBUOUxTT1krdWpZcE1qWE5uUEw5Vms1S2dDbW1pREEKcmRMYkRIZ2Mzd3p6NjlNS3Y2SWxLaDlBenlyNCtFY0ZaZTVPTzBUZzdEUi8zc2Y2WkpPbTJpTkNLMEVEL092KwpqZ1ZMekJKamUwbjJ1eUNjTWo2S2lOSHo0eGpCcDNvWURUaWNuNVRwekhTZWIyOHVrOEpqeGQvR3lTTmNpQXJQCkxjVWdkWHMzVjVob3ZUQSt1Ulp1MlgyVXZudUZwRWNoNk5ja0xhOTFSMFI0aXZteVdwRkRTTSsxWFMwQ0F3RUEKQVFLQ0FnQVdJWXprMVEwS3M2d1BKdXFiMXpKT0kxd0IyM0dFdE1TVm5rM09KVzdPN29RdmZBcnZ0Q2hHQjcxMwpHTGJSLzdnTWZDTTZHUnhqOEpqMEFwVjIwT1BFVE9IN0trc3dRcjRaMkNyQlhRaDVvMGh6S2tITXVqNEdaUk4xCnBIK3k2Sm1Denp6NTBuU24rc1pJTm9DclQ4dlJab1F2NGNhd3B6SzZtY09QVnFuOTBpK3g5Rm5zazMzOGhEdFIKajlmZG1PUitwL1QwZVc3bFZ3YlJKSUdwSzAzRUh3YW8xQ0pmZnJabDdSbVVrUWJvMEcxME9NY2xDekFXYnBHRApCaC9CRTZaUXd4Q0FHZjlUdzNReWpoV1BRUy96aE5XNitxeFVzakc3Zmg1UVBRVXZPSXlwSkxycElRZVRXYXh4CjJtc1NKOUhhVElISHI5eUl1UUFwQ1BUYTNPeGpNSGI4bGJ5KzVNMGsrOHRQUEtGd0FObEY5Rko4OGtSME9SVVoKMWN5V1ZFY05JQlVubXBuaEgxYjVuQTExckoxS01oREo2WWFGcURka3ppR0tBT3ZQQ0lYVllwbFBqMXAvR0tNOQpBSU8xT2JwckJTODBUWEpCQytHSGZaQzhscGdHWVF5NzNxanFMSmpYbjBORy9VZSt1NWdmVm9WdVhRMFMrRjkzCnJtTTgySGptbTNYdUF4R3pSOXRSRldGUU1OS0I1VjI3a0JwVGVIRnFwSFpDU29mQ0FvZk8xTG1SMERWUytuZkcKVVJ3a0VmVCs2V2ZwL3diVk82L3hNZkY3Nk5INTlzQWVpRXE2L1ZGOGhKSFZ6ZjRESVhMWDMvWXhyTzd5c3ozagpZSTlKUlAyNm1QR1pFM2JTRVhvcmRDYXBpQWFKU1B5VEVmQ0FuT2F0OUlpeTYrd2pnUUtDQVFFQTg3TkU2dnJ3CkpndHB0NnRVWDBuUXNPQzloU1BrLzNRYUV3ZW1hVXYreGxFcXpQdW9YWU9taXNDakthMVNWMHY5a29jWmVMc0kKS0hQbkZuTGFRSEVXMUxDVi9QK01pbFlnb0dKTnVUQ09oODVLME5WY21OWEJ0U3VqbDhXQXRJcC9CZlIxMUp4VApFQVp2Y2lxekk4SXZjT0lzcTFPaHFxK2tBY2pjSnFHU3ZJaDBWajcwR0NCUUZOTDV6NEd6cEMvcjhTeTh4eVBwCkw1TDFKUE9WSWRPd0hlQlBHbnpkeXVhamg5SHBraTBZUFkra20wSTBGYmtEWjJVN2JSakg3enNPbXZZZXN2U1kKT3VzSWdhdzFYczdNSkJqMGtLMkNJOFg5aVo3NHBQcjhPQnFkUHNobnRueU1VM1VIeHFtbmc4OFROZHhVL1Z5RQpWNmcxRDIvdEtNU01jUUtDQVFFQXlCc1l5ZkhPYnVzL2c0cjQ1T1pzaUYzZnJpcFpyV214Nm92SWFJMnNEVlc3CkVzdmRIcW1QU1NaMTMyVkFSY0d3b2R5Rk5ndFUrRFdSSTlEcDljQi9HSkdveWZ2a2xBckFCc080SlFwYk5IZ2cKbTkvWmRoelB0dDZyZE1sYStSc3BpbWdycWdlMHVPcDFHVlpGd1FvdE9BMDQyaEN3NDh6KytWK0NJWm00WWhteApTMWZmUDdCMGkwU3hjc3RDVXFLT1JhbUhoZWcrN3VyL0VpUTNEemNOcDBmeC9JZVdleDBJUlZsQ1Z2Q3FhajN5CjVRVWJSdHhBZ2VvQ2FkYkxYSzhqNFp0R3VWbVRKcW9ZNzJnUm5uN0duVW9mSGUvYXV4WkxmUnVjaUNhLzBSc0wKYVg4OWZqUjBVS3d2Rll3Skp6ZTlvRlhFWmxOSVNLRFFFTlV4SWZacWZRS0NBUUJrOFZxWW9ueWFwWnVTa29zTwpOVHNXS09FWHB2aVJ2M3VWYWxQSnhjcXdScXFkNFplcHRJQmxkTW1nMThRRm1OcGR1VXdac0E3L0FwTXp2enNiCitqdmt1WWhIRldzWFdmbUZ0WEpRUlFha3hoUkRVRDFjcVIzbGR6LzUrN3NHRFYvMERZQkpJcjlkSWUxRHN1QWsKN2FoTTc4Sms3TzFJRUJ5MUNJZjRFSEVCV3R3bFpVb2lQREF2ai93ZHNiSEJUb0JDazY5V0pVL1BmdVcvK28xSgpSNi9wa0NIejdNako1S0xUL1dUc1FYV0srbGJLWUsvR1Y2NUxRNmxMMVRucm8rQzIyejk0RE15Sml4VW84VFhpCklYSjVlVVRFTUxwNUt1ZUwrNmN1WHkvZDVWaEF5eTM2YnJpSlVTNTVZWWlibGtoMHhPRUhXUzBRU2dKQWRMSWQKY3R4aEFvSUJBUURFTm4yNkZ4YjZnRVpKTUE0YU5TK2JENkZ6WUNlSytTYngrNXJKbXBGb2lmWGoybTY1MEQybAoxc2FpQk9CZkJpdXlxMDhielVUR0ZaQjU5REpWUFNuaTU0RUFmYlNHelh1NXBsUjhUWWxkQzZXOThtT0RnNERSCnFjbXB2SDh0NEVwOVl1UGQxNnlIM2E1dzU3MkNLZjVwQmQ0SFJYS09ETWEvczcwZ1FXRWhJRnhPcXAxSUVEaFgKRDBhSWIzSmJJUFlzckswc3lxeGJEYWFMSFdPMzBaM2J0NW82cXFFTm0wd3U0L1UrMXNIaloxY3k1aXoyOEtWNApQZ09iMEhpY0swZ2R3bW80K1BKbmFVY0dDWit0TUZhRWlOZTJQU2pYWm1jakI5NFhTeGV2Ykx0bCtOUk5XaFhyCnZNcDJjRmZSVXNEbjVQR3QvRi9XaDRrOTJDNVRSUkxwQW9JQkFRQzRCVStuV25IRm4yL0xnbEhjK1JXSVdwUUMKT3pTSDZQZHNwb3pyT2sveHROVU9WT21sM1N2bGhqcjBWamgrcjdlcUppOEpJTkVlcUUra3o5UFR2ZlBWcFVOSQpZQ0JTQXQzVzkzM0lqOGdSbXZ6dy9SMGV2VGR0RlhxbHJEMUNOQjVxaDIxUnZuczlzL09OTlo5bW05Znp3OURPCjdzT3JhYXFNQlp3aWd1bldUMFlmcUpyTVRac3NWVXFRQ2VMYjNOOXFTMStnWmRXMWc0TXA3TFBHamo1QzJNSzMKS1R5Sm01QUVML1ppZUVDVFErNm9lYVpHZkg5bHZtMEtqK0NNc1NpT2RpeStxWmRUdWtpdm8zQkVxKy9DVEdIaQovN05ORnFDRmpDd21pNUxGc1lCWUtWWUlvVnIxVE51R1dWK3Q5bzMxWjFDb1IvWHV1ZEhUR21oQ3NJL3gKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "clientCertificate": {
-      "metadata": {
-        "description": "The base 64 client certificate used to communicate with the master"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUU5akNDQXQ2Z0F3SUJBZ0lRQ2J2NTMydWtwS3g4UTRjUkZQNVNSekFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB4T0RBME1Ua3hOelEzTWpCYUZ3MHlNREEwTVRneE56UTNNakJhTUNveApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1ROHdEUVlEVlFRREV3WmpiR2xsYm5Rd2dnSWlNQTBHCkNTcUdTSWIzRFFFQkFRVUFBNElDRHdBd2dnSUtBb0lDQVFESG5tN21FVXVlZDhXYnBweXp5N25zdUVxZjNpRWUKZGEzeUpuaUxNTUZTRzhoQzdJS3g2NlAwUEF1SFF4ci9xTG5WR0VjTlg3dzFVWkg1Vy9LNTFzSEJVeEZJdmpaMAplOWRwNzVxY2p1a3BjUjdES1kxV2lIb1JRT0ZWM3pqYWFGc1JEbkE3MEpHUUlNdE1abVhCSHdxY3NUWTFzMHczCnVBYWZzRHQrWU9jVDl3RVMzb1h6RmtyODNoMGpQV2JpMEQ0VUFPTnI4Y2RtbnJ6NGM3VnpaMW5HQytBK2VGejIKcEU1ZEpkcjdmRU1mRHJzaTZMMHIzMUVOb0IxTkF6a2NEU3hTdml6WEVlY25hY3lqRHFUR0FDNHJtUGRHTUJnYwpmMExoRXdCNEZ1UnFvMlpERVBoL25qZUh1cm9aRUM1Rk9hZG51QTIvQXMzZFBJUUlKVGpZM1JQODZpdHZDcXZ1ClFDZ1YxNFBhMUZCUXljNXVMY3Jtc01kRjZsVzdPbVZiMUNyMVp3L0VwYWQvUHczeFNoUXYxRnJBcUczVXdUQVMKZ01hM0xlcm5RSzZSMDNwRDhWU1UxTTlJVFBqeXJjM01TM3ZsKzZwOXBjWllMWFJITDZ6YW1GOGRyWmZvVHBaZApZaHZ3bUp1ODhsL3ovUXp4dVZmcmExRzRnV3RyU0krY1BWbStkOU5OR05SNWM2U1NHR3BpMENiZ2xxNEdpUDVQClRZT2FqWDRmMG5sbi9ZUkdtT3lrTmRMVXNJK0xqUGQ0VjhHSTlXOUh0RC9oZ3ZqVXV1OVFwZE55V3Y0eG1DWUcKakd6bDVxOHlPT1FTeWt6M3hpa0Y0UHlHMWhIVEM5amdEVGF3eVIrOGhMN3orMGdJV0k5THJQQnQrSlRQR1pCWQpVemhpYjJISWRDRHNFUUlEQVFBQm96VXdNekFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJCkt3WUJCUVVIQXdJd0RBWURWUjBUQVFIL0JBSXdBREFOQmdrcWhraUc5dzBCQVFzRkFBT0NBZ0VBZXl4T2ZtZjAKMzk5TUxUdnZxekg0aFd0TnhoNHJJelZoRmhwbUtnUDVPcnluUGJ5cjR6RG4rb3RNUkphVldESnNCZnNydkt0MApQdUlnUzFrMkI3UFZoVVRjS0c0RUI5RUpnRFV2b0xzc1JTcWRRbGZWdytCQm9ua0xuWTNOcHo3WGNaRGFsb2ljClh0SlcwdmV1Z1lrM3JWcW9zRUhScm42akZlS0hadG96eGNJNDlpelpwNk1CNndKekRlOWZrSjV2Z3FJWXdPNlkKcnJWVEZaSW5UTGhQR1pUYTRjaExSK1Z5QmIyalVsNFk5UnpTbEkxTjlqbnFnd2luQlR4cXRJa2pYSGNMZHJaYwpINmszV3FqaXpXeS83ekVud3pJOFcxSWRub01xcGJ0MnRVSHExQ1E1M3N0M3NRSERZQlhjZXlybUtndExxYlZvCjd5dUMvOUJDcmY5dUdmTm9lZFZ5dGx6VFN1bmlEbHVwZnRsY0tlSlNTYWNGZFlRdGZSY21XRUZHbmU4SWoyUjEKRGx4NkdKMW85Y0VCcXp4NWxzNTV0MC91WDdEVm9kSmxHRkI3bXh5QjlMZ1BvN1pDRUtkdkZITVhuc2NSam9xSgpQak4wVGdydDhROUdUM0NOUkVzeitEK0ExU3h3bEE4NEc5a3AydmhmZ1Z4QzUvaWpteHVYMDJnc1kyM09HNm1RClBnUTU0ZUNvVVRqTi9LeTdVZGNGSHR0L2I0RzVMRDRXSDhzOUQza1RTRGhQNHVFenpQeVBTVWpqY0ZCL1dGYVkKQ2xpR0ZUSmhiUkxZN21qRi9pMTZ2b1FDTXlMZ1R2Q2dPQU5taFRCVUFNdE1nNkEyZFdwMWF2U0JQSVk5enVzZwozRCtQWkcxUUZraStFeFhJbTc2NVhnblJvQm5WQXpWOUY3bz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
     },
     "clientPrivateKey": {
-      "metadata": {
-        "description": "The base 64 client private key used to communicate with the master"
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBeDU1dTVoRkxubmZGbTZhY3M4dTU3TGhLbjk0aEhuV3Q4aVo0aXpEQlVodklRdXlDCnNldWo5RHdMaDBNYS82aTUxUmhIRFYrOE5WR1IrVnZ5dWRiQndWTVJTTDQyZEh2WGFlK2FuSTdwS1hFZXd5bU4KVm9oNkVVRGhWZDg0Mm1oYkVRNXdPOUNSa0NETFRHWmx3UjhLbkxFMk5iTk1ON2dHbjdBN2ZtRG5FL2NCRXQ2Rgo4eFpLL040ZEl6MW00dEErRkFEamEvSEhacDY4K0hPMWMyZFp4Z3ZnUG5oYzlxUk9YU1hhKzN4REh3NjdJdWk5Cks5OVJEYUFkVFFNNUhBMHNVcjRzMXhIbkoybk1vdzZreGdBdUs1ajNSakFZSEg5QzRSTUFlQmJrYXFObVF4RDQKZjU0M2g3cTZHUkF1UlRtblo3Z052d0xOM1R5RUNDVTQyTjBUL09vcmJ3cXI3a0FvRmRlRDJ0UlFVTW5PYmkzSwo1ckRIUmVwVnV6cGxXOVFxOVdjUHhLV25mejhOOFVvVUw5UmF3S2h0MU1Fd0VvREd0eTNxNTBDdWtkTjZRL0ZVCmxOVFBTRXo0OHEzTnpFdDc1ZnVxZmFYR1dDMTBSeStzMnBoZkhhMlg2RTZXWFdJYjhKaWJ2UEpmOC8wTThibFgKNjJ0UnVJRnJhMGlQbkQxWnZuZlRUUmpVZVhPa2toaHFZdEFtNEphdUJvaitUMDJEbW8xK0g5SjVaLzJFUnBqcwpwRFhTMUxDUGk0ejNlRmZCaVBWdlI3US80WUw0MUxydlVLWFRjbHIrTVpnbUJveHM1ZWF2TWpqa0VzcE05OFlwCkJlRDhodFlSMHd2WTRBMDJzTWtmdklTKzgvdElDRmlQUzZ6d2JmaVV6eG1RV0ZNNFltOWh5SFFnN0JFQ0F3RUEKQVFLQ0FnRUFzVnMreFFMUTRQY2hoMjI5QkxJWmV3MHlvRi9IcFR5QlZBaUNTWWtEK21QY3hqbEUxYmU3Y0NCNQpUYkI5cUhETXkxeEtwTU5PZ1VEOEpVVmduMlVEdVRTSXdzemRyUmpyQjZCdkNuS2ZEc2NHd2ZlRk1FRUowNUtGCm9ybzExVGVxMGJpMlZ5NjBaZzM5RXVCWHdBSklkM2VyNW9KclVZWWJ2SDNrSGlFU3JsWmppZFJUeHVzanJRL2IKYTVmK2RiNzNxT1l4S1pNanl6VjJTSGpsMnFjVXlEVjlBNFFGZE0zL0lodWtPSlRyUGdqa2s5dWRXQUdPRGtFWQpSM2g1b1ViQy9yRWhQZVVXTDVwOHl0TVQ2eWYxM1o2RzlNRithck5YUklxUmZDRTZ5TlJzNDJHTXFEWjJ1QTFiCmt6RWhLemhTV0lEYkZiNzBFWURXL2pXMEVGbzhpb0dkdTNrcmI3OXFUeGJRWWE3YUxSWGlHc0RQSE1jejloZlAKN1dwZ3NrcWVwODlCcm4zWWFBMDk2aFlVMHNSTUhjU3NnNFJtdnpvTGIxTGdacVZxRW1QNnY0aUZycGlQMUNCWQozbGlwRHZLTzRNU3VzWWYweUlJWkU1eHBpNTFoSHA4cWZZOW11U2V4cUdWMHBRTmhoQlA5czZyNUZuQkkvdGFYCnF3K3ZXK210N3hjRnlBbDlQZHpWUmVnWmx4WnYxcGs4SVR3OWpMREFYbk9UWm9DNzQzSlhpTGd4U1lsdC90b2UKZlIvbjRyMkJvSGs2cWRYZGU4RnYrYld6MXVxMERtZVJ5eVR3UU5jc3VqUkc2cFJLR1U1OFJrNG1DZGlwdkN1TgozQWtSWXBLWXVZcTRLZUFLZE1xTS9JVGhlc1Y2b1FyYmJXbkdUWDVpMnZlb1ZVMWxic0VDZ2dFQkFNcTVHVUZpCjJtT2xHSUovZktJTHVReWJQeXpKTTRSN0tra2t4NStVaTdwYm5DZ2hDZFFwUERPcnFoUFB0V0NyZUpBZGlKbWwKeTdLMjBZRFBkYm9nY2RjaEVSK2I5bnhCWjg0UTNnbjl4Y2tsMjdkMzcrR3lCZEljTS9PNnBWMGtFZ1B4TGwrOQp4SSt3UGd6eFdhdytsVVNzRzJyU0tLS09zZG9GWkx6bkJYSDkrY1pIR2diRVpQb1JTMFBNNWg3OXBNQW5PRWRUCjlxNGx3YVVwNzVwTWwyWUthbWhsd2RYdUVnNThYU3FPS2I0VjhjZHd5VjgyT2xhVXVrUUhWbFp0UzlKSGVaS0MKOFZyYjhzeU1qQ1FMNXZBblYzSTFPcjJHaHZLQUdKckJPZVR4SXUwQnN2Z294aFZkNVFzbnF5cmtDZEc5RllhVAo1SVlpRWtCWk9EUEN4bVVDZ2dFQkFQd1VmYjhnSWh4eUN3L1YvY3NGV29XVUwzZElPd1BZblZ6bFR3SEJUSTlyCjFndXBwT1Avb2xHQ0phUG5Wc1BQeFlQZ29CSXVSSjdyZUhCclFvS1lYR0tBTUZ4Q056R2txbGo0RnZSYitoUFYKd0wyNEthd1FjMk5vdUxyWGg2QnZZYkUrV1phZG5HWWREV0doWDNVcGNjSmdmS1p1aW9VNzRaRVdvb2xjbWYyTworYnFWUXF3dVpySzNWV2MvODFQTkx4RFk5UEcwLzgySytnRTBlTG5oRWlrRngxNXZhcm1NbmlpK01QRURHbGlWCkxWNldrR2lHcWtGMTFYZVJUNkJlb3V2Mzd2dmxvMXlYcE5KOElhMzdEaE9POXBPcVA2dFpvUzYwbW13YitnOTEKL0VqM3FYVklud1pSWHo2MkwzT3hLVTFqbzJTVDdKUTYzbCtYY2lMenJqMENnZ0VBVnpPK0VHbFVaZTZibDI3OQpqcnNhTTdrSU9OeW5vNEpUa3prV0FhZ2xYdG1QVjVlMm9hUEhPTGJNSjA5K3h3R2JqK3FVV3Z0OW52ZVRNU1NNCmtLN3FLVThaRFk3S1BYTHBFelFnUHc0QnFWLzJubm9pSHVTMEtraGxkSjlDQ01tK1VpSEovL2NpZVdpbm1HdXQKVmpGcGhpdStjM25KYnZ1UXQ2Y0FTVjNhOHNqOFMzVkVWY3JmWU01Vm9PbWZ4NDcxOG80c1lFcFczMXh3YXZxYQpEYmFLbmFNM1dJY0ZGV0FlTmtyNnpKWndrRXJpUVJkY0YrKzhzb2V4aEJmZjVMZUpHUUFUNUprYzl5ZUx6cjlhCmZScjlrU3ByTEQ2SGNRVlFRVG9tMjFMbzgzbGl1NjZ5YkpzbGNnVjh4QXFoVDRiZVRuRld0QmdrQWlyZnpQeFQKOTdmK0hRS0NBUUFFeU83S0hmWUh6REpoanBKT3REOVBvY3gwMnk0am1JMEVJbVlwaGwzSnF5WlkrbE5pOEl0SQpPTXcySEVJTlhYaEdWSkUxUnlPT1VMSHNrRnltMWZXSytSdng1Ri9mMVZ4V2EvOGpqRXRtN1B2SG5pTk1YTk9UCjQzeitMdkVvSG5VZ1JDcTNMUzYyMFg1YmlCQ2p6TEdZR3ZUQ3cvNWxJUW5iRXk3cXBKTlh1TXNNdTZDVVhCMGUKNzFQenJjY1VwQ1Jza1hHMDFOYTJOQmtpeExnMTd3dkZNNUxoUEFRdW1YaTNGVVVnamdxRisrN3NpTGNkQk5GZQpoTG9VbHZHSC9jUGg3c2JlaVRGY3BKUkFXcExaRnBiaDBDam1ES2xBdTJiUDJDWEdQNUd6a1czRWhNNzJwdlk5CnpIV2VYeDd2ZDBGdGNxSzdXZ04zbk5aendoQXNrYXVSQW9JQkFRQ0U3MEVtUHJ4akZiN0ZKdThLa0lja0Mya2gKRjR4MTVJNHlIN0E4T1JJV1UvUjFadUc0aFAva3g3bnJyOVdqdndOanNIcWtUOE1ZM3ozS3N4NkJJa3BoeXlzdAplU0lEaTZ5cUNad0dWNGVYUHJaU0tvd25qWHFoTmtTaERaM0lUdExoYlNkKzJVT2xlT1daTjBET0NjV09sTVBCCm5HSXhLclB3aDFxbWxWUzJNZXlhR0FXcHFobUNnekpxZVVScy9TTDZicjlLUm1WVkdMaE1xK1R3dk9CdFBhOGkKT1prclVzb1pNVkk2elh3S24wT0Z1S2FuRjY1ZzA2aEJoVktacnVaNUhQY1JtUldHaXZHUDhBQXFhMGJxbEJoZAoxU1pQb0JCdDJmalJEZ1MxekNWaTU2dWNOaXA3elJGRmZDOEpHY3ZiTlhVdVJpYVNrbVNWd2ZUL01reisKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "cloudProviderBackoff": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Enable cloudprovider backoff?"
-      },
-      "type": "string"
+      "value": "false"
     },
     "cloudProviderBackoffDuration": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "If backoff enabled, how long until timeout"
-      },
-      "type": "string"
+      "value": "0"
     },
     "cloudProviderBackoffExponent": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "If backoff enabled, retry exponent"
-      },
-      "type": "string"
+      "value": "0"
     },
     "cloudProviderBackoffJitter": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "If backoff enabled, jitter factor between retries"
-      },
-      "type": "string"
+      "value": "0"
     },
     "cloudProviderBackoffRetries": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "If backoff enabled, how many times to retry"
-      },
-      "type": "string"
+      "value": "0"
     },
     "cloudProviderRatelimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Enable cloudprovider rate limiting?"
-      },
-      "type": "string"
+      "value": "false"
     },
     "cloudProviderRatelimitBucket": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "If rate limiting enabled, bucket size"
-      },
-      "type": "string"
+      "value": "0"
     },
     "cloudProviderRatelimitQPS": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "If rate limiting enabled, target maximum QPS"
-      },
-      "type": "string"
+      "value": "0"
     },
     "cniPluginsURL": {
-      "defaultValue": "https://acs-mirror.azureedge.net/cni/cni-plugins-amd64-latest.tgz",
-      "type": "string"
+      "value": "https://acs-mirror.azureedge.net/cni/cni-plugins-amd64-latest.tgz"
     },
     "containerRuntime": {
-      "allowedValues": [
-        "docker",
-        "clear-containers"
-      ],
-      "defaultValue": "docker",
-      "metadata": {
-        "description": "The container runtime to use (docker|clear-containers)"
-      },
-      "type": "string"
+      "value": "docker"
     },
     "dockerBridgeCidr": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Docker bridge network IP address and subnet"
-      },
-      "type": "string"
+      "value": "172.17.0.1/16"
     },
     "dockerEngineDownloadRepo": {
-      "defaultValue": "https://aptdocker.azureedge.net/repo",
-      "metadata": {
-        "description": "The docker engine download url for kubernetes."
-      },
-      "type": "string"
+      "value": "https://aptdocker.azureedge.net/repo"
     },
     "dockerEngineVersion": {
-      "allowedValues": [
-        "17.05.*",
-        "17.04.*",
-        "17.03.*",
-        "1.13.*",
-        "1.12.*",
-        "1.11.*"
-      ],
-      "defaultValue": "",
-      "metadata": {
-        "description": "The docker engine version to install."
-      },
-      "type": "string"
+      "value": "1.13.*"
     },
     "etcdClientCertificate": {
-      "metadata": {
-        "description": "The base 64 server certificate used on the master"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZEakNDQXZhZ0F3SUJBZ0lRZEpCNVNnUW9wNTRBcEwvMG1aNWp5ekFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB4T0RBME1Ua3hOelEzTWpCYUZ3MHlNREEwTVRneE56UTNNakJhTUJVeApFekFSQmdOVkJBTVRDbVYwWTJSamJHbGxiblF3Z2dJaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQ0R3QXdnZ0lLCkFvSUNBUURFc0ZOQ01hWXNudVYyQ1crTVI1TjBlR3gvSHJzcFFsZ0lzejI2ckplOVJYQTBRWmsrMHA5dFRUUEEKWW1NUnBJaG5hcWVTVDZzNThudFRSUC9NMHRmSVhVOUUvandGUCtEbG5CejZ6cWJzMGRZRFhzcnpaMDVCVzdCagplb2ZrRGJRUDhmQXdXSjZHQy90bFJveis3KzFoMjZyQlErK0tBOSs3UzMyR3hCbGxaVVZXc1ZtUEJhUE1aUkdJCjZKb0h2YnRqWHZDbFplK3F3STE2MWF3Q0kwaTZBR0JzZVZsN3hrTkJBc055UkVFUC9WUlgrOXJUTWNrOXdacXgKOTBjK1JzNWViRDlGYWV2aHZnbnJRZkZTNTFQakYyUUdBYTBGd2R1NlBLMVNWTEdTOFNCWXZMOGtTYW9RR1ZlVgpzOGJaZTBSeVZ4ZDdFSDM4Rm1aNElHZGJLY0o0WkhzRjM2aGVjd2NYdWNVdStRcGFML0hNVTEwbStoNFhINDhjCnRqaE1SK0NKSHd3WWIvOGgyYUlHQnRyZ3IvTzlkTmY3VE1CMlpySG84RHJVWDJHYnQweEUyTWlQVVdMM281T0QKcWJ3NnA5R1NqazVRN3kvVXJOMWZvSDNRMWVDMXhFbW5pelR3blNkR3dVN0ZkdTQyNG1qa3JyYk1qTERrbFo2UAptRHErMjVHNGpWdEZ3YWlUVVR0VEVKNGhsbTdMaURHQkRuN1pldTFWeW1IcHFrbGt0K0trNnhxc0V0OTQvWDN0Clc0a3Y2MGc5OHdPdnhrOUk5OThjdFE4N0NjR1o1dkd4a0RVaFVGYklMeVhKV1RmdlEyL0ZuZ1YraEpGbENGVk4KR2tuVGp1N2VBN0g3NjZLUGJ4cVBJaDZoazIyOVJMcUdRMmRkQ1pzcmlTVkVVSmFxS1FJREFRQUJvMkl3WURBTwpCZ05WSFE4QkFmOEVCQU1DQmFBd0hRWURWUjBsQkJZd0ZBWUlLd1lCQlFVSEF3RUdDQ3NHQVFVRkJ3TUNNQXdHCkExVWRFd0VCL3dRQ01BQXdJUVlEVlIwUkJCb3dHSWNFQ3YvL0JZY0VDdi8vRDRjRUNnQUFBWWNFZndBQUFUQU4KQmdrcWhraUc5dzBCQVFzRkFBT0NBZ0VBS3Z4NzZmR2dTL0VTZTRsODJSSkJ2MklzaGh6aFA3Q2NsTlJyTldKVgpZaVBSSkRjdEt3YUtUVzczU1FkVmVNY2lsc1RjWlJrcFI2bWJMZVM5b3FoOWlFMzY0Q1MzbVJHUzFiQm9xZkNCCnY3d0loelNKK204YzlpNmVYcWtWRjU3c2h6dXMyS3VGZHIyaUlWSFh6cEY4ZkVFWnhkMWpSV29rNmM2NEdreSsKUHVuMDdSNnQvYWwrOHFoL0lXUWlWRi9iTTBMdVo1bFNTTlY4b08rY21QdWdKTlNrOHZNRTZHb3FDbEYvNlo0agpFc1ZCNjljc2VlVWJ3Tkw3MFRnV1RjVFFJVzUvK05pYVlwK3krT29ZZlptWUtPVSsxRnJFcm9UTVBwNFdzZWRaCjIvV05GRTBHWVkvZzlnd093S1MvYlNkODhWeDh6NHVyNjdGaDRwQjBTWm9jU1dMbnNCZCtqRWF6ZHUyK0czUTIKY2UzeEI3cGNuQk5pcEVEdXJXcWhraWZvWnhjcjBuTm8xNVRQMTQ5UVJjdktTeXBVMllpd045Vzl3UkFhUk9pNQpyclF4aUdFUGJMZmRKYnJqUEhtUnpqbHNaeVF5Q2FrL0lndHh1WjcxWFFJVSsyUlJtamgzbHNTaDlHVXE3dDRLCi9XbzJWTDZJbEFNQ1lweWRaRmZIVksrVU1BQjdKRlo1NkxOQnBidEU0MkxyTlorU3YrdWNmc05DYXM2ZXh0aGUKMHQvOGE3UWxZczBIN3J0NnZqVTZmKzcvbFJvaWlWL3FVZWdDMzVpazhvZzBrNW4rcHR2QkJsbU9nU0VPRXcyMwoyc1BsZTBSVHdZWGRBZ2lTVHVDb2g1eXlBNkErenU0YllJTnBjNGRmN1JKb0Z0UERjNnJMdDJWaC9kbDk0clQ4CmxXUT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
     },
     "etcdClientPrivateKey": {
-      "metadata": {
-        "description": "The base 64 server private key used on the master."
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBeExCVFFqR21MSjdsZGdsdmpFZVRkSGhzZng2N0tVSllDTE05dXF5WHZVVndORUdaClB0S2ZiVTB6d0dKakVhU0laMnFua2srck9mSjdVMFQvek5MWHlGMVBSUDQ4QlQvZzVad2MrczZtN05IV0ExN0sKODJkT1FWdXdZM3FINUEyMEQvSHdNRmllaGd2N1pVYU0vdS90WWR1cXdVUHZpZ1BmdTB0OWhzUVpaV1ZGVnJGWgpqd1dqekdVUmlPaWFCNzI3WTE3d3BXWHZxc0NOZXRXc0FpTkl1Z0JnYkhsWmU4WkRRUUxEY2tSQkQvMVVWL3ZhCjB6SEpQY0dhc2ZkSFBrYk9YbXcvUlducjRiNEo2MEh4VXVkVDR4ZGtCZ0d0QmNIYnVqeXRVbFN4a3ZFZ1dMeS8KSkVtcUVCbFhsYlBHMlh0RWNsY1hleEI5L0JabWVDQm5XeW5DZUdSN0JkK29Ybk1IRjduRkx2a0tXaS94ekZOZApKdm9lRngrUEhMWTRURWZnaVI4TUdHLy9JZG1pQmdiYTRLL3p2WFRYKzB6QWRtYXg2UEE2MUY5aG03ZE1STmpJCmoxRmk5Nk9UZzZtOE9xZlJrbzVPVU84djFLemRYNkI5ME5YZ3RjUkpwNHMwOEowblJzRk94WGJ1TnVKbzVLNjIKekl5dzVKV2VqNWc2dnR1UnVJMWJSY0dvazFFN1V4Q2VJWlp1eTRneGdRNSsyWHJ0VmNwaDZhcEpaTGZpcE9zYQpyQkxmZVAxOTdWdUpMK3RJUGZNRHI4WlBTUGZmSExVUE93bkJtZWJ4c1pBMUlWQld5QzhseVZrMzcwTnZ4WjRGCmZvU1JaUWhWVFJwSjA0N3UzZ094Kyt1aWoyOGFqeUllb1pOdHZVUzZoa05uWFFtYks0a2xSRkNXcWlrQ0F3RUEKQVFLQ0FnQTZqK2xxUnhBY0x2OVJJc1FVdDJiL0FiQUVOV2t5Z3E5bGY4QzhhUkVRNkxEY3pqOUxoaml6dVkzVQpGVGM4RklvTWlLUDJHMFIzRDJ5S3dYdU1SNmE1NEpadWkyZmhoRUI0L1A5ZjZkR25wMTZhU0VvVEtNb1RDYksrCkc4aUVMVlJVZnd1dHlXVUJzbVdhcE9Qc01CRzAxa3ZFR1c4ajM3MW9yYlJsUU5QeTdiRTBlNytYcHUwN09VaDgKUkExQWlzeFZiUG9udE84a0h3ckE3UWUyNXp5TExQdUlzS1RsQm9ZVndEWGpPdEZJYW53SGFsU2dGeTI4OW4wUgp5ZmRyWW5lbGc0TmZMb2R1QWtBL3pMV0dvcHZHZkx0cVVtdHEwR3FVeStZcklrNXcydHh2cjFzVitkenB5REhjCnY5ZFAvN1RFZW92aU4ybmJlZXZ1am05WHBGcGpLbnlZejkxMnUyb2VrRjlYWkJZc0h3dlZKYWZKVmVxN044b00KeUNYMWhXM2NlazFMVzJ5ekhKbDRCenB2ZXN2M2xEekZsVUVQWWxFSGZ0TERvK0ZtTHZ3TGFpK2oyckRWSU9JOAoyU2VtdTJGdFY5Q3BTU1FUQU5UckpxRVhqZDRocVdKUXRWdkVYcC8xcnB6NjVIRkJSUkVsdkdQVTBOb09uVDV3CkpiUG1wNTdJTFJra0tYYWRKVlNlODdVbDRMNWtMeVNyaFN4bjcwZGhNbGtaY2NsTENWOFdsWUpIeDdJWW1YT2gKekUrczZsZUVzNW0wN3NCRVZLUndob2k2M1IvU0RFRkF6L1dxNWh3QkZZUERiZGxWdlk5cE83aWlQQUN3WStucApTeEtDb3JuYUN3d1lzalFWaEFsK3Z1Mk4zaUF0V04yQU5CdWNlZHl5U0NDV2E4SDFOUUtDQVFFQTZ0ZUh6MW1hCmE1WlhCWTBtYXNnNHdZOHo2emk0dHY4N0dsY3k3QmFoazNVLzJyZGJCZ0hvTzFab3pPb2RFbGdhRmxiL1NGNGwKNklYQmZxQnRNVmprQjRHc0xyYUlxYnU5Z0p1YWlSaXM3ZTRkcHM3cGh2dWw1Z25EMnN2NzF2YVhka0E3SUtSRApURjQ4aGx3UjFKZjIzdzZxeWdSL1JWNm9RRHNUelZacGJyOWJjTFdpZXdFQS9hc0RzTE1NUTJQUU5NZnYzcCtHCmpveU9xOWgxRmMreDZETHlUM2pDZE4xTkhqeTVnWUFYc2swdjJlTHZheHNWdW9rL0FVVm9FY1ErSFIwZTI5Rk0KdndKd1FhTkNkbHpGV1RhNDRrWTc1cHJXS2dFSWhwTU5uWEdJWU43MzVIUXJTL0ExLzR5WlB3MVlFWDljY0hBZwpOZUZuVkNOWThvNGZid0tDQVFFQTFtalJlL20zc3NoVFRyY0JzNlF5SVNBUVpCYmFLUmMxZzdaMHY0K0ZONlhrClhPN1lkUGdxdzJCZndLVWZCQkNvcDFOS3JsbnZreEQ4ZEFiZVgvQ2hIYjRaOUIyczhJL3FpMmhaRWhpUlMxRE0KUUI2YmRGeGcvRzhJOGZnNmh4eWJ0UHhLS21lZDNtc3Q2RjJROE5RbDdXbEcyU3VQOUxKUkJOeFZ1eXlYU29JMAozT3Z4Q2t0OXdYNmx4bTYwQVhNUE1kNHFCOTlCeEdsN250Q3JxQzhyVGdacSt5RjdmaWZ6bUhXRkNTRFB4dFh3CmhueUQxK044K040emhGdXhzeDNkeG1iNDQ2cUx6QWIyWFZyeVBCSlBhV2FoSTVPRlFXdGh0MjBQbWRFc1k5dlAKam5ZSFE3NVhiNmJYY1pKbkRtanVESE8xRkVPRkJHamlFYnNoK3FZRDV3S0NBUUVBbUhVSHMvTGxyd2JRdzhmWQpzdVg5QXB1bkJ3T3gxd3RuSVRpTzFIbjB0emdkRmk2R3B5WEIwQlBPd1lrVENuK3JuK2ttbmFLUlZaelAreGJICkRJdzZyU3pmelF1dk9SR3FlcjJKMjRycmFTTjJtSDRuV1B3eHZWK0ZpSnQ0aVJ0WlJPbDUrVHpxZTcrSjUyZ0sKSTB2c2R1NmNyYjJ4cWlWRGNUOXBJWnNCbzJZVFJONkY5dmkxM2ZpUjBycktNVTJ4TXpMQlpIT0g5UzhHeUVVago3ZDhDRGs1VXhJY1BKck1zaDM3QXAzT3k3b3Z4anJBbTRnK1pVWm9jRHdVeUJLYXo5RTZkWS9OQ3NaWXhya3NBCnNMcVZXOCtNdzBqNVJrSXEydVlFMU9qT28vRzZxYmpXa2JkaERGR0xuTFY0SDFqWVhiT2pIVk9OZGEwNVdZUUIKRUtaM2ZRS0NBUUVBdHhQWmpCcTJtSm9sU0ZsTHdyQzVmVDk3djNzajNXSkw5Nk9jSE5YWDBxUjhVajQvNWVEaAo0dUl2NExjZHZNTGN2OE9IU1VqU0lLbW9ad3BXWjJWNHJZVGRkR3pDZHNic1p3MDZ3UkRwUDM1R2FabTQ4NnJOCnhiNnB6TE5BaG80UEJvTkdjTjc1RmlvK2tPTVVHQStPTXlKcHRKWlYzWU5GV3ZrbzJ5SkFMUWJ4VEpMS3h4ZWUKMGRIcWkzMkxocEZRc0N3Ymg0MURBd3R1MnpVaTNnRW80UDdwNm5XMGxReFlIQjU4OGtacUpFWVprenhPOTlEdgpyVEZPbS80UHhmb0NuSjdnZHNYeGlNMkpJRDNBQ1RzNVE2NjJlVUpGem81NmFiMWVUT0VuSGoxYkJUSVRFZTA5Cmk4RFN4YzlVNENFSTR1a0ovYnVKb1RKTmx3WkxCVk1za1FLQ0FRQnNQT2JJLy9IZnJUd0hiNXE5Sm0wMDlOTTQKVW1LSXlxa1pvMmx6UEIxUytNcmUvMkhXZ3JVVzNiUzhrU0l0UC9yRHQwb01LcFdaWUNnZStzSXJKQWNaRzVxTwpGdHZPMkh0aWRzanZ2YXRZSERMbUtCUS9HL0F5Ni9WcGVrTGplRlpBcEJhUG10M2F0YXhkRG1zVFd4SVhCSGV1CmR0bjR2MS9ocjZ1V0FiRE12Ri80SWdOeUZjbkZweXdXZiszODYwb3RlVjZTM1ZWWkFFbTFKWjFIQUNCQ1QwZXMKNkN6SWhCT0JKNFhac3lxSTNaUm5kQzJQZFBvUUpXdndJVGprS2VNd2lQNTZsTkpUZGxnTVUrVWNLcUh0Nm5WdApNS3g0YUlVaXdHV04rSW1hOE14SGRKK3JKRVhIbzdIbjBMM3JnVVhWeDR5ZDFFSllzOXpqL1VZUTFIQUUKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "etcdDiskSizeGB": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Size in GB to allocate for etcd volume"
-      },
-      "type": "string"
+      "value": "128"
     },
     "etcdDownloadURLBase": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "etcd image base URL"
-      },
-      "type": "string"
+      "value": "https://acs-mirror.azureedge.net/github-coreos"
     },
     "etcdPeerCertificate0": {
-      "metadata": {
-        "description": "The base 64 server certificates used on the master"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZERENDQXZTZ0F3SUJBZ0lRYjZZVFEyNW1OOXdMWStpTUdNNWpBVEFOQmdrcWhraUc5dzBCQVFzRkFEQU4KTVFzd0NRWURWUVFERXdKallUQWVGdzB4T0RBME1Ua3hOelEzTWpCYUZ3MHlNREEwTVRneE56UTNNakJhTUJNeApFVEFQQmdOVkJBTVRDR1YwWTJSd1pXVnlNSUlDSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQWc4QU1JSUNDZ0tDCkFnRUF3dVZxMjhiRklrb20yeVJhVkUrS1hYSUI5WlBDR3FhZHVRQ1Rqak55azRlbk9JMVJtWTdtYm81aGpVRGkKRG02Rm1XczZtM0dsTmpGaENTejVlZXc4bXJWc3pUNEZTL2ZVVkdObEdXc0kzTGhZdGNjYVFqWE1JdGpiVWZyTwpLYlFGOVdacUxjL2VHZC9KaVZXdDJSdGVVWlFoOFpjT0UvUWl2eWxzOTVMMGxZcjdJbjhRa2NjYUI2bm5LbmlGClhzd0lsVlZaQldMRFY0YWxLc3pMNTR2ZVIxSXZMUkZVbVhtak9UN2tUaXZyZ3RoM05XQWlnTURHWC90YXFjUS8KN1RFTGtza04rZjB1UzI3dFBMc1RybWo5M2NSbmUwZUF5UUhnUGV6VXF2ZGZaNEdSV0dkbHRkTE1PV1AwRzI4VQo0YlNIZ0ZuQUV6NTVkVDVYMjFOUDJ5c3NtU25KdUx2LzhDNnFZRWVmQ2w3ZXk2S01xNnNCTFVBckoyOThBa3drCmhWbjBMaVJwYXRKVnZpYUlpYzRmd0E0UXB1RithRytiaURlTkR6dG1hNC92WjBjVGpQNkpXWjVZbURMdGczZWIKQ1ZvVlpxckdyazI5a085cVVzNy91UzhHWnk0RlBHeTdHbjBxRVpJQWZoWmVmK2NmTWVaMmVXcXFPY1pwZlA5VQo2bFZaSmRIczFOc3hTTkF2K0ptVGtmMzgwTVB4TnVqYVA4bzgwS2pVYXp0c1o0YzVKOHdRb0J3OXVJUXAzQWRICjVCVzZRUzdYVm5SbFp3cHBTUUJaMmFxelNKWVVDTkRWb1ZPdEFoUldsNnloNjg1cngvZ0lGK09ZNmN6WHdrQzkKY2w1bDBvTCtrekRpWWRQVGVGdzRmWG1FSWZGYXRTWnB5YXJ0Y1U2eU1zeHhDTk1DQXdFQUFhTmlNR0F3RGdZRApWUjBQQVFIL0JBUURBZ1dnTUIwR0ExVWRKUVFXTUJRR0NDc0dBUVVGQndNQkJnZ3JCZ0VGQlFjREFqQU1CZ05WCkhSTUJBZjhFQWpBQU1DRUdBMVVkRVFRYU1CaUhCQXIvL3dXSEJBci8vdytIQkFvQUFBR0hCSDhBQUFFd0RRWUoKS29aSWh2Y05BUUVMQlFBRGdnSUJBRFNUdkVzclgrMHNxTnQ2aUh3dmJUdWswa2I0TS9mZkNNVktueWhiS2tRMgp0dEV2U2RoaEF3RTgrVmJrRmpYMVNnbDBFMTZyM2R6Y0s2a0RhbmpncHFTTnpGL3BLcUtiaU1CUnpoWVlmQWtYCmNiNlpFQW9ZNHo3QWVXb09FbkFmZ0M1Z3R0NlBHTitLZUFlYWFET3ZYSDRLM0h0d0JVdno0SFVUUEhQdEFoWS8KRUh6N2xreWtLWGRiNXZzL3NyRDRocGZDWlRvUkhwWkRVM21aU2Y0SnVScldURThSZElLU2gyOEp4MkFucDUxSQpvdkZsZGZpeExobWxZczZIM2lsa1U5NW8zZTFJR2hidEZyLzZEaHpLZFRLSHdrenhjYlRDMUpyTkJTNHhkR1R4CjhneGFMcGc0SGxadzA2TVRpY0V4ZlZRU0kwa2x0KzJEWmNNWGlCemQ4MXhvRWk0RUN2NEEwSVF2bThhV09ReXMKK2pHMWFUTXZRTmdBYnhRbThldXd6S1NWVGhZOVN2bUdrN1dLbDAxcFJXdVBUYUFwM2dUK0RhdXFVWjVjaFcydgo2VDVuOUFoQTRLb0JyQ3VKb0tYWTVCOUpWaExERWZzRFpkSTduYVdlREtmbXJUcDJsb1FXczZyYWpBaCthdms1CmVhaGdLMlZBdVlnazR1akZSRlhMOUZaS0pBQjRxVDN1ZzQ2Vyt2eEFMNStaN09QN2padjIyMDRjNlp3bUllcWsKdGZ2QzhQbWZuYkJ0aHRudGxuUlZTNEk0ckdNS1hXbDNDaE1KdW1BSTF3SkRrcWxFcjZCSk5JeE1UaVBDb0c5cQpEbUhoa2VVclJxVzFFZE00eTlxSUF6T0VMdVhmZ3RLTG9xK3ByaGVBYUIxdE10aXpyYnMzNmgrYmNhTjlCbWdmCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
     },
     "etcdPeerPrivateKey0": {
-      "metadata": {
-        "description": "The base 64 server private keys used on the master."
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBd3VWcTI4YkZJa29tMnlSYVZFK0tYWElCOVpQQ0dxYWR1UUNUampOeWs0ZW5PSTFSCm1ZN21ibzVoalVEaURtNkZtV3M2bTNHbE5qRmhDU3o1ZWV3OG1yVnN6VDRGUy9mVVZHTmxHV3NJM0xoWXRjY2EKUWpYTUl0amJVZnJPS2JRRjlXWnFMYy9lR2QvSmlWV3QyUnRlVVpRaDhaY09FL1Fpdnlsczk1TDBsWXI3SW44UQprY2NhQjZubktuaUZYc3dJbFZWWkJXTERWNGFsS3N6TDU0dmVSMUl2TFJGVW1YbWpPVDdrVGl2cmd0aDNOV0FpCmdNREdYL3RhcWNRLzdURUxrc2tOK2YwdVMyN3RQTHNUcm1qOTNjUm5lMGVBeVFIZ1BlelVxdmRmWjRHUldHZGwKdGRMTU9XUDBHMjhVNGJTSGdGbkFFejU1ZFQ1WDIxTlAyeXNzbVNuSnVMdi84QzZxWUVlZkNsN2V5NktNcTZzQgpMVUFySjI5OEFrd2toVm4wTGlScGF0SlZ2aWFJaWM0ZndBNFFwdUYrYUcrYmlEZU5EenRtYTQvdlowY1RqUDZKCldaNVltREx0ZzNlYkNWb1ZacXJHcmsyOWtPOXFVczcvdVM4R1p5NEZQR3k3R24wcUVaSUFmaFplZitjZk1lWjIKZVdxcU9jWnBmUDlVNmxWWkpkSHMxTnN4U05BditKbVRrZjM4ME1QeE51amFQOG84MEtqVWF6dHNaNGM1Sjh3UQpvQnc5dUlRcDNBZEg1Qlc2UVM3WFZuUmxad3BwU1FCWjJhcXpTSllVQ05EVm9WT3RBaFJXbDZ5aDY4NXJ4L2dJCkYrT1k2Y3pYd2tDOWNsNWwwb0wra3pEaVlkUFRlRnc0ZlhtRUlmRmF0U1pweWFydGNVNnlNc3h4Q05NQ0F3RUEKQVFLQ0FnRUFyc2wvSHlGUmRLSVozTmpxWmNoNzU3Z3lSNksvSnBXY3gramJiR0Y1ZFJQb2hWQkFDVDVlTEhKbQp6SDZPL2JCakFxZG5CVGRUbXBtSVUrbFF4K1owcDY3anArSGljRElQNjZyRVpacFhkVk9pdzB1UG9pZUxMd2xiCkVGZWxBME9mUUdrYituLzh5U21wSGhDSC9EaU9TdzFWcjh2djVUZEMzanZ4ck1yUHJUbmFaaUtjb3BCMEtNRlkKUHYrZFpOb0pMSnhCWFJJbzdGc2x6NCtob3NRT2tkb0QweUJDeGUyUDArd3labVQvTHZhaFdtNGdJMlkvd3A2eQp2YVB5VE85NldLY1ZjTWg5OTByQldvRFFjczlZTmNaSnBBY0pXYnZqOXNWcUtQWDNTdVdwaXlZWDBvdjllYzdKCmdyMEpkaTRvZzVSNkxRZ1BkM1YwNTQ3OUJDcmhMOTRCR0JUeWlLNHNpa0gxT3hCZkdBTVFvcEpxUlZYTlhxejYKOXRmanhPWWlINnVqVzNmMUREeEVEYU5ZWXZGU0drczFsbnc3UUt3SGlSTmdjODBnODJ0VzJqMjVWWUNyakFUMwpmYitTd09JcGg3N0pJMm1yWCswU0FoMThYaU8vbk16NWd0TG1sVnRXbE5QaTRsNm5Td2p5K256ditlRzhLRnhsClUwTEhPRDZ5V01yWmw4VzZIVENTZ0ZlNDZqK2NMY1VlaThJZXZMUGR5amNJc3lQNkIzMVgxQXZmbzFvTWV6akwKbldTMlZDYU0rNVkyWjdOVjNBakVaT0ovZEpvN203MWJuMjlqcnN2aEpPeHhvci9lMmEzS2lBSjZGa0lLZmJlMwpCaFB3WkFhWDZHMHlwVjR5cUJiSm1GT3g0ZVZWaTNhVnRlMFhpSFVqS01Gakd3SlFvNWtDZ2dFQkFPNnh2OFRBCmJPaThzK1UzdXExMkZObzB4YllkalhYUUpoUUxCd3lZZ0JiTTg2djZFWG12M3JNYnlVQ3VwNnBTUWsrZThmdGoKeThFTW5nYUdveW5rNi9Hc004OHhkRGNsYzY1Tk83VXlQY3lPUURxUlZ5MS9TM3AxcE9maUIrTmZGYyt1ZnJoZgpZZGQzN3pSNEJ3SHN4cDdBVWxnTG8yQk10enBvZEhYaXpUN3libFVmNHRXMGMveGdEcHc4RWNEZXo2NDIyMlVPCndZdXAzUFFXcmt5U2oyT0MzLzhWeXY3TG54eEgycldiNllOcmdSTXFqNEdaOGhLVEROVk84YmhSaXdqMEttejcKcGo3R0kzVXJMT3NncVliQVY5NC9tR3BhVGtYQkYxOGVLbVNYT2gzZUxSZEVCYm9WYmR1VG55WFdNc0EwL2dwQQpOeHErbmVhS1pTeU4rejhDZ2dFQkFORUd3a09FSmx4a3d4cjRQbHJwSHB4TCtXZHpYbG9JNUQ0dGU4dWxkQ3RSCnY2RjBzRUdrMEVpSXRneW56ZnY2Ny9GdVI1TlVzNGhmTDlJYzlmQXFwbGtpb0szekFJMHdaVWQyYnRtL3NRdUoKclVLTnRLdi9hLzlnZDJQdzJuV3d4R0FaK3p2MGNMbEM3UytXVUppSnJCTlM0b0JGejFzZEN0cFBiVU9PNUJQWAppSCtkOFFTc2NuTHZ1QXdpK2hvQ1h1WVJVMzVIVDNRNmV4WmI3WlVBeHVQRlFmWU43MlRJUnlBUWJSNVl3TEhsCjdaalpzQ09wZlltRldDOE1XeVA2WDZVVEJtUktkN0E0K1RGU3pjWVRYNlIvNE9PR2NCU1VSU0VXQmhadWhUdWkKSlhqa1ZTM2t6azUvcU9OWFFnZWlHZUJRd21hTGswaUgzUUl4RDcyYU1XMENnZ0VBQWF2M0J0NitKSWNsejJZcgpoWWw5TGVZT3VHN09qZE91WUplUExoUm5XVUdJTjEwaUFETXVJUjBCdE5WRVVWb1FJdFNmSno2VXI3NXg0T1BTCmdybWF1VytXVVU0c1hUS0M4K2FRazMxTmw0QXJqUDExbWRqNVkxc3RrMzR1eGZYbGhqWFhwMXpycDRHc2lEYUsKL2dWMWdxa2dLb095V2p0UFVUWm9FbWRMUHJTZDl6U285d3d6ZjhJQWVER25naTFOVVJBTFMxTG1JaDlIYitJMAp5RTZDZUpUekVxdEpaNjF2YU5oTC9OZWh0QXp0czMrcHo2T1BZWGZzTUJaRWRTRUZFMFA2aEJiakhDOXhFaUlDClI0ZE1DS2lTTlBsSERQK2k2clFtZ01FS1ZQZ0dMUzFnTFhpSmZic21zTklBM0ZmNnRRUHAvNUpoa0d0aldia0EKYW1aNEt3S0NBUUVBeWo0UjVDV093RUsyQy9nNHpObFZ4c0F6dGdhSU9mRDBkYnlvVk9mbk9LckdFVC9IOGh1MwpjeGJqbmVjV2hFSE51dm1LdzJCbXZRSHNVUTI0WUFIRUplWTlOVkV6TFdpdjlhNy9uaXU4NzM3c1pzS1pGdm54CjBvdlJ1Sjhub0V2Q0ZZSE45YnFTL28xazFIQkoxdTBOMHp5VTdxdWM3M2x3TUw0ODUrcnZmc3RCeE1oYWxMME4KbDJ1ZDFoQlprS1RPa1NnZWNzWW9lRHJGTVdNTXd1aVhoM1lxVmhveGtIKy9ZYVRERDJPc1BmUk1LV0ltN0xwbgpQcElJT3ExbjJhMjhzUWx4VzhRNWZnWUNCZGtxUkFZbXVoRUkxTndVd2JTY0ZtRXF6clZzcjhBNUpYazNlVW95CjJ2emx1ZUdKZjcwMThEWHpnaWgxL3UyRngwTVZDY3lSR1FLQ0FRQW1ybHlaWW1RVmxkanNLZXpoM0R3MnF2bGsKWVVsdFpRWVR1VFRQbHdWaGJ3WXlyMWlJdWRWcUIrY05TLy9wd3J3WUluL1NTYlo1cjJCamdhb1V1NjIzZTcxWQprYTR5VnB2K0JucWxieHlGOXNFWTMyWUw2ZlZEN08xdzF2TWJ3eFlTSUxFcDBTNlAzRFB0b1pPK21BMHRLRnBQClBtYytlai9XMHU0dHpwS3ZhNWhlc1d2VGpvUVRQbWZWOWpMaVMydVhLeFB1Q2NnSUdiZHdyV21lemVVcHo2cHQKTEZMSWhpR0VsK3BVeUVXdkN3a0JISGFoOWtFblNlUU80MkdDK3MxYUEvRGhqL3I5dnVFRCtDQ1o0VHlRVzJ4VwoxQXQ3VnNKNUdnU3J0UUxiVHZnSC9HNmNMem1jNytwMC9rQnhHOUN6VFBUMkdCcmtxZDBMZk1oSWVKRmQKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "etcdServerCertificate": {
-      "metadata": {
-        "description": "The base 64 server certificate used on the master"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZEekNDQXZlZ0F3SUJBZ0lSQVBsQjd4c2Y4QmVCdUdNaEhMVXlqSlF3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTVRnd05ERTVNVGMwTnpJd1doY05NakF3TkRFNE1UYzBOekl3V2pBVgpNUk13RVFZRFZRUURFd3BsZEdOa2MyVnlkbVZ5TUlJQ0lqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FnOEFNSUlDCkNnS0NBZ0VBMHZyQ2ZwUTg2VlZqaFVGeVYrOXFjT2NUS0ZkTXFyelRTUjA2cDFINzJkSGY5UHN0L3A5eXM2a1MKcW1mR2xMRjA2SFYzOTBQY3ZESVF5bWF6LzNSMWoyRXV6cGZ0ZmQyNHJVMEZFZHJZd2hBdUJaeGNFWGFPY1gyNQpKVGc5Z2NBZXhoZ1NOTGVBS2NuUmI5dlg3L3lYN2ZldWNxTXgrQXlMeE1yTUptUEd3ZDZHY2wzV0lqSDJiSVVoCjV5ZXFlMTRseEZKWFhxWGxqK2h6SVlWcFp5YnFpOHRxS3ZkTDNOTHpSUWZycDhuMDNzc1BUb2JSdFQwVUV4RWwKdEp4cEFxek1XOG9LYy9MMDlsQ1lRVDUwNmFWQ3RxdUJMYTVHUy8rUVNCcG5oU2hQckhMRjY3NEhQbzdyQUhGWgpJTk1HTU0vVXZ2N3grakVvdEVtYlZUWnZBOUo0RDZHWVBsRWgvKzBTR1picVZmU1NuWVZYODJ5SkVhN3E4ZVI5CnlORTBweTdpWFV3V0FYcXJaZE9TZ1pzWEZ1UE45WVNrSW5KMmsxWlRCNTJncDRPNjRYY1VHMURXOTVCVzh5K3YKQmhNbmNFVGdLUDBRS2d2SUdWNTZaYjJaWjZiKzVuY2pkK1hnbUwzRTJjcVpnUk1WOWdXOWVPRk5Ram5BZUtXdApKQ05mRmNTV1BabnpYRkNQWS92a1BXT0JqbmNHS1FuYjF1aTFrOEtGanZWcWN3SnF4Nk45R0tyaTkrYkxZdHNTCjFRaGxWOWM4MUxRWVUvL2k0Q2hnSUVCR0FkZ1Q3MDdMVEFJd3JHaGRFS0R5eG14eGI2aFo5VWhBVlhybDdtdncKcEJSZUU3WDRYNlFjamxwSzlFZXpqeUNrR1lHN1JnTGxiOCtkREV1Q0VpQ3BTZHVoc1FrQ0F3RUFBYU5pTUdBdwpEZ1lEVlIwUEFRSC9CQVFEQWdXZ01CMEdBMVVkSlFRV01CUUdDQ3NHQVFVRkJ3TUJCZ2dyQmdFRkJRY0RBakFNCkJnTlZIUk1CQWY4RUFqQUFNQ0VHQTFVZEVRUWFNQmlIQkFyLy93V0hCQXIvL3crSEJBb0FBQUdIQkg4QUFBRXcKRFFZSktvWklodmNOQVFFTEJRQURnZ0lCQUwzL3hjZlIwVCs2Z0Z5NVRJT0h3TzdzakxERVFMQk52WFlqQmxhbgpJZ3lQZTlyMlBHdnI0dldBS2lJbnJpS2RDQWxLZzAyUHdHb2prNk9RM2ZidXFLT0lYeXdJeVNuOGFBUHdDWW9OCmFBT1NpVU9DK0VpODlsQ2t6ajlOTDZROWtMSzZST1pQWWxKNHVvcXZxazFSYnNpajFlTGNBRUZaWVMxd3BoU1YKZFNITGN4SGtsK0hRYmZwazUzRys0eDdOSndoeEVRVGpkTWlFQk9GRUtzR3pRQjFOTGtpdVYxS29SU1JYVFc0YQpaa3cxRFdpZXRoZEVjdjg2ZW84RXVCSExsbTBrazhnd2RISTRDdC9hQjF1enZTY0F5TDM2SU5MdFNCaHIwRDRsCkJETjUrUVpsL2NqeEt4bE9EMDV6OTVBSEp2VnlFUnJUL2ZnSE9LanZnNU5ReVFhQXNLVTk2WGkyNWNRWlE2OEYKWmpESnJOZS9ZWkVPRlBUM094SjF3ZzJpNGZSUlNPcXdyVGE5SDFrZTlCeXdTUWdSbWZoM3dob2k5MjBrUFJCUAo3V0F5am5uWGl2cElSL3FKYVowTjdnZ3dJcFFoRTdlZlFQYk5yRDM4TnE5c2QrVzZWc3QyMlhpRXB5NVFFUldKClpTSjRBaVRONCtGd0xoTW1OOTJIU2xNRGJDdDZBYTRzRFRaRHVBTFNEd3prQWdmZVJUaWxldTNwOXlyWGRZL2cKMUVKQlh0UjNjRkhqYjJvNjc4UExHa0d4aVJsYlJ5R0s3ZUdpT1ZCbmJJU2VQMFlEYVVJUDU4SmdYenArQnphMQpJL1pWdWx4MXhHd3BlL1RvZWtVM2hjWlRndjk3QVNveGk5R1dzNFNOTTMxVnkrWmFvNk84enY1WHQ2UVZmaHFICmxvbmIKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
     },
     "etcdServerPrivateKey": {
-      "metadata": {
-        "description": "The base 64 server private key used on the master."
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS1FJQkFBS0NBZ0VBMHZyQ2ZwUTg2VlZqaFVGeVYrOXFjT2NUS0ZkTXFyelRTUjA2cDFINzJkSGY5UHN0Ci9wOXlzNmtTcW1mR2xMRjA2SFYzOTBQY3ZESVF5bWF6LzNSMWoyRXV6cGZ0ZmQyNHJVMEZFZHJZd2hBdUJaeGMKRVhhT2NYMjVKVGc5Z2NBZXhoZ1NOTGVBS2NuUmI5dlg3L3lYN2ZldWNxTXgrQXlMeE1yTUptUEd3ZDZHY2wzVwpJakgyYklVaDV5ZXFlMTRseEZKWFhxWGxqK2h6SVlWcFp5YnFpOHRxS3ZkTDNOTHpSUWZycDhuMDNzc1BUb2JSCnRUMFVFeEVsdEp4cEFxek1XOG9LYy9MMDlsQ1lRVDUwNmFWQ3RxdUJMYTVHUy8rUVNCcG5oU2hQckhMRjY3NEgKUG83ckFIRlpJTk1HTU0vVXZ2N3grakVvdEVtYlZUWnZBOUo0RDZHWVBsRWgvKzBTR1picVZmU1NuWVZYODJ5SgpFYTdxOGVSOXlORTBweTdpWFV3V0FYcXJaZE9TZ1pzWEZ1UE45WVNrSW5KMmsxWlRCNTJncDRPNjRYY1VHMURXCjk1Qlc4eSt2QmhNbmNFVGdLUDBRS2d2SUdWNTZaYjJaWjZiKzVuY2pkK1hnbUwzRTJjcVpnUk1WOWdXOWVPRk4KUWpuQWVLV3RKQ05mRmNTV1BabnpYRkNQWS92a1BXT0JqbmNHS1FuYjF1aTFrOEtGanZWcWN3SnF4Nk45R0tyaQo5K2JMWXRzUzFRaGxWOWM4MUxRWVUvL2k0Q2hnSUVCR0FkZ1Q3MDdMVEFJd3JHaGRFS0R5eG14eGI2aFo5VWhBClZYcmw3bXZ3cEJSZUU3WDRYNlFjamxwSzlFZXpqeUNrR1lHN1JnTGxiOCtkREV1Q0VpQ3BTZHVoc1FrQ0F3RUEKQVFLQ0FnRUFweVNpRVVXL085dTZERWZkSG0wK0ZsUDZpV3NnQWVPMlA2WTRZWFpCNEQ2MC9wQS8wQWppQmhOYwpCa1JRdmx3WUVsRjl5UmFxT1M0d3Z5aStVUk1pVDRUZVlDMWNxT3FPOUR5Z1Y1VFpSR1V0RUtUZkM3YXhBcGhuCnBXVDQxV0l1L3lEeXkzRFV5RVpxOWdOay8ydE5zZWtXK3hydTYyU0ZGbExUaVZaaWtCU0t6dkFvUk03d091aisKQXZNWnpNSzVpTjd5K0xqVk5UMGllTndJdFAvUHNSQmwrOFFQQmRMWmgwYlBHdzZVUUN6KzQyZExuQm5YWFlPbwpLMzMrYzNBU05tWEtBakhvZjNzNkkvWW5DVE16dHlRSUl2aCtHSmRPNXRDRVVxbXM5U0c0U3hzeEFnNlhmckpOCnVnTjBWQmRTcEQyMTFsQTd2eGpSUnFEcE1rMzdiblVtWU1ZU3pFVWhpSEFGQjlONUJ1Y25mb0RDYmNJcHQ5ZGkKOWw1NHV1NmJIcW5FcjNiUFM4UUxNaUd3NXpqNi81c0ZOaDRLZ0NWemVVb2FTOFZnVjM4YmJ3cjZpVFNZRXFvQwo0MmdHRnJ0eVo4Z2hwMFZ2MUtCMWNCSnRsQUYyejdSNDNVVmIwSEljcEg2QUszVHV0V0Y5N3lhcE4zUHhTcEljCnJ0NUFPQU1DSHpOdGNVbk96aTVHVkxJaGQ0NGJRb1E3NjdOM09oRldDcDVab0FQTGFDdFFoMWxWUDlEZnVzL0kKZU5IUEE5Uk9iOHk0ZUJXNHBKTzFOTlREc3kyMCt3N3JJQ1h5THErNXJlQ2hVQ2pXdkl5eEJ5N2hjbFdZN2xpNwpaUGNWUS8vYUFTT0drWjFYa3o2Z1R3c1lyTG9pMW5oWVpJak1BV0hrSUZXV1NlZVVrRUVDZ2dFQkFOVU5GWmlSCjExdWVGRFFMMTlaWURhMk92OXBwaGY3KzFkVlNuL2Frc05YTGVMYmkwcUhnRlhIOEs5Z0ZQWFpmZVkwM2VUQnkKRFF0Y0lNR0poYTBXT0hTWXRTNmZvdFllL1dQOUwvSVQ2TnJ6QkxTVjVRYXF3bkMxN3JScTd1MVpwLzFkaWliNAp5VmZ1QU5QeDVMOUdCdzQvRWlBZ3FYWWVlaTZ6dmFtY21US1pNUTlIcDk5RXBXRTE0TmlHaSt4V09TdXBvZ0tZCkpOOW9BQjFGNmExcVArdnBjRVZXbG42Y1d0VEtOcXRHb3pwRGF6OWRzTGZXQ3RucDM5bmRldDNadVF1TmI4K3gKL1V5Y2h0Tm9CV2tIaDRtWnVKbGVsNk1YL3k3QzQrYmtzMVljY3UxV1BVb3UwMXZOa1VHOU9zLzZGdGNqdmlLQwo2d1g2bGxpSnF5SjQrTThDZ2dFQkFQMkN4SGZ2SVpZeWpjZklYVllvY2QwVVd6WktPNWN4VTRPT3p6b2FjcVMzCk5rb1VYc0Z5M1d2UEJ1TUJaV2pZVUNjTTloVFBjSzFTdkpZWXdvcEwyRVNUOFd3L1J6M05RNmFDZzhyaGhMbFMKK1R4Y1gzNEUxWGZHd0F5K1FlYWpnTEFxV1F1elBZb1FlK1dETVdmTTRvQkdFZ0RnWmRDYlM2Nk9hM2lBZ05CLwpybEdtUFBkbjBOZWtLNEtXZEo2aCtHUUFsYk5mdHFLcFN3NDlvYmpTUGNOeVJpRVdqVDF0WUU0M09HTHJVZWVYCjlqaCtxRUt1bGtwNEdsTmFoa0t3Q0FOM3NRbnZBRnMzd1BtNWlEMnVDcWhFNlhRNU9hcWZtelpZbVlKUFdoM3EKbCtzeTdIVkgvU2RKRnZzSEdQc0x6OURoV0RWWDdoVDcvblNmNWcwRy9xY0NnZ0VBV1UrSDJ4SmdGZzc1Wnl3RAp5ZDNWdGdqZVVoL2tSUlhzNitVY0c1ZkViWXREU2w5aGJ1eHg4UHVHSWFOb3RZT21mOVZlWHptZ1VEL0psM2dmCjZvUWpISFdibGpUalhTRldsYURnaFhsbEpzdXpFRVM1NG9hWXhnanVUUUY2c1ZMaFFpd0JLdjhsNEU5c1YyelMKdUlBUm14NURhZVpuUTVYWklGVEcwQ0JPZEZDVnFWTWZnMC9TaUNLKzQrWGJLREtvK3EyOHRadXo4VmMyblE3ZQp1NHlMeVVodGdST2dPT2t3aG4xU1Y1QmdBcCthaU5Dc3NSUHdMcE9FL0Y2RkVCVWlKajZmUFpEZW4wd0tsUHJKCk1kTXZOVGFVbE81N1lLcEJsZ2VxNC9MQlh2ckVEc3dWRzFEdjEwOGdjazl5SlJjd2xmVnMwaWpSZndzaUZYRjQKcFJYVEx3S0NBUUVBMlVqMzlJUTJHWEtES3pXRktvL0g2R0hHUENZc0pVN1Y4ZkM1bFdlTjA3aGxBK0dweGMwYQpFNG1Dc1pkRXdEU0huckR4U3F6eU90eXJYMHNoa3orbXdrQzdzTGdiNjlDL3B6dytrZW54eEpabG9XTGJSandHCmEzOGlwTWw5MnAxUmM2MFlYWHJueUNxUXh3dEhrVngrMXNzNEt5QXFwRDQzQkFwMSt2YkpjZXUrRWFXV284ZUwKclFpOWNsUmE2SXlUUmNOcWpEQUJiaklFYnRSTWhRbE9mdkszUVN6L0tpTlJaRGpZVDVDNnh2SHN6RWRqR0tSagpsTGlVZDlVak5vMkNrTlpLRytXS1BLVHc5aG9idUNJd2FFR0loMkYxRjlWdFI0dHhKOHV6eGVpSkJjTEVBVklPCm5WbDhKUFRVYUhpYlNzR2F4VDMwaG0vbWpUZHdDc0p3Q1FLQ0FRQjZqNTNmdGJ6VDNGSUozT1BYR2pXRE1KcUIKbTZ4MWVGeFBkTUJxdkxXeVRDdTVLVUR1VGl0SzlsUldzQVo1c2xiTmVlVXBSN0dRREtjZzRTOHZ4KzRNNWtnQwo0ZkVGQytwNDMwZXpuSTdyZ2hBcWlkZkpMU1JBWkRTSTVjK0UySkRJSFBGc2twY0t2a2xqcU5oSjVTNG1yRjVsCnpjcitlb04yTG1vYjAwNm82UzVlMGtOMUVhTWd4ZWg1WHFEY0xFNzRIKytPMmI2Y0lTWkFQMTBNMEFQUWdQb1YKcDUvbnlkN1hadFVLdXZ4a2FEZ3NxbWRYR2cxNGR1aWZzRjdLdmpUZy9XSjhKeCswVnprWWxNL3FiOWJIaHViTwpSNW9jYlhkcU16WFpTdXFqWnozSElRZTUrc1J3cldTZjkvVjZuS1ZMVHJ0UTVuUnBJMWRpaHhJMDJhSHEKLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "etcdVersion": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "etcd version"
-      },
-      "type": "string"
+      "value": "3.2.11"
     },
     "firstConsecutiveStaticIP": {
-      "defaultValue": "10.255.255.5",
-      "metadata": {
-        "description": "Sets the static IP of the first master"
-      },
-      "type": "string"
+      "value": "10.255.255.5"
     },
     "fqdnEndpointSuffix": {
-      "defaultValue": "cloudapp.azure.com",
-      "metadata": {
-        "description": "Endpoint of FQDN."
-      },
-      "type": "string"
+      "value": "cloudapp.azure.com"
     },
-    "gcHighThreshold": {
-      "defaultValue": 85,
-      "metadata": {
-        "description": "High Threshold for Image Garbage collection on each node"
-      },
-      "type": "int"
+    "gchighthreshold": {
+      "value": 85
     },
-    "gcLowThreshold": {
-      "defaultValue": 80,
-      "metadata": {
-        "description": "Low Threshold for Image Garbage collection on each node."
-      },
-      "type": "int"
+    "gclowthreshold": {
+      "value": 80
     },
     "generatorCode": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The generator code used to identify the generator"
-      },
-      "type": "string"
+      "value": "acsengine"
     },
     "kubeClusterCidr": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Kubernetes cluster subnet"
-      },
-      "type": "string"
+      "value": "10.240.0.0/12"
     },
     "kubeConfigCertificate": {
-      "metadata": {
-        "description": "The base 64 certificate used by cli to communicate with the master"
-      },
-      "type": "string"
+      "value": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUU5ekNDQXQrZ0F3SUJBZ0lSQUx4ZU8rQ2hCbSsrYkwrN1ZadjJjRVF3RFFZSktvWklodmNOQVFFTEJRQXcKRFRFTE1Ba0dBMVVFQXhNQ1kyRXdIaGNOTVRnd05ERTVNVGMwTnpJd1doY05NakF3TkRFNE1UYzBOekl3V2pBcQpNUmN3RlFZRFZRUUtFdzV6ZVhOMFpXMDZiV0Z6ZEdWeWN6RVBNQTBHQTFVRUF4TUdZMnhwWlc1ME1JSUNJakFOCkJna3Foa2lHOXcwQkFRRUZBQU9DQWc4QU1JSUNDZ0tDQWdFQXkzYlJXbzBuY1JIMWtoYVZ0bzdTbDYza0EzcXQKY0dBUGFCSUxhZ0JmcGI0V2VHTXUzTGFXUUtmTS81R1lweW1jMm9KOFJvWGxTUis4cG1IK05TZnJmSGloOGluMApHT0xHL2ViZ0NMUXdMazV3RmxuMVV2Y0pCSW9melcxWXMyRnMrR3NrdVVCS2ZPNHhBS3pNUmpBNktPc0k4L3hmCnNiWEVpNUl2TFN5WEt1ck8xbnMzZVBURjZLV1BqdnNsMkZiRUNCSUF5SFZpdUhDVXdXRGc5eVY3c2x4MGpJQWoKNFd1dTNFN3J3NXRJZWZsbUtiUXpuaFZZbldEdjZnRis1d1dmelNJbDZkNWdLZ1VSYU9jNzhybjZsbHEzYS9BSwphMkpNU2k4NHZESnhldThzb25HSHl1c0NPcmxDS2dTQjdqaE53ZEFzWE1FTUVFYXM1M28rcHRIZEkrZS9MQUt1ClZ5RFlWS2FnR0MydnlEenBSVTFXdHVPNzFsTWl0M0dsOTJtaitkaHZ4c1FTZ1c5VnplOWZSMk1TckNnYm1CUSsKUDIvYWpuUUo0clc5eCtKeWtmaytMbmp6d1RqOUlzb3ZORUw0WnJubTVSZkpSbUNab0VXU1JKUVJFczlDaUMzZApJNVNkS1lJWERqNi9pSXdOVUVTQTEwRXJMMXA1aGE1QTZVNUxOdGxMNlBleEd0UkxXaG1hWkQxZTdvWmYxODcvCjd1NGhKekRaeDJqRzlLUUhoMHpyQUlkVWRMRmI1Yk9xc3NGd0ZRUjJjbDJDT1RUTHM2MUJiOUdpUklRMkxvMFoKT2VDSm83ZllGN3lhbld4Vzg3SWRpRjkrQnVIK3dCczVzUnpTdHNyTzk3WTdNbUp5K0NsZjNIaDJhaW9teVlPdQpyQmVNUHlhbksxenFrMDBDQXdFQUFhTTFNRE13RGdZRFZSMFBBUUgvQkFRREFnV2dNQk1HQTFVZEpRUU1NQW9HCkNDc0dBUVVGQndNQ01Bd0dBMVVkRXdFQi93UUNNQUF3RFFZSktvWklodmNOQVFFTEJRQURnZ0lCQUVGbHd5cmcKeW14OGZqSmQzUE1XdWV4T1NNTzVSa093d2NhOGlRWEhRRXE4c09ncXd1anVxTUNvVGp3QkFkSlhZQXJ4akFUNwpVc0R6Z1c0OXYxZkduaTh5MTd2YzQwc3NEOHl2YmQ1RjA5enZoK1hLSldGUXNzdWIxYXB2Z0ZWcStOb1pKWlF5CkpoZDdrRERxY2dqODZIaXp1REpjWEs0d1NkSDNlZlhtUEorTitPYVVpZkRyNW1raitEbDA5SGhmQjIrblFSdSsKWERnZzVvMUwrTHRySnVBb0lkRjlsWFZPTlVFN2lQdDI2Q2lha254V0phZTRndS81QmN3amphaTdGT0lGcHlpQQpUN3ArWHp2eWc3WUk5VU0xS2xVWCtoaUI0TTB4NnBGUTJ3dGUraUxacUJKRGYxcEZ6aDh1YVBFVnE2aHNMMmhhCjNaNDgyMTZsaXluUlk3VUlzRkZFSVpOZkhzQjdUbStnZEszakExQktGaU50TUo3MTdObURQNEJ6Z3dYUy90T0cKdTEyd050K2dpa1BubkJ0YUpwSklhZmR3bnpyK0NaaEhoYVBEb1dYUEhvTDM3STRoSmNrYkZwVGNpMDZrRlFHSgpUb29aNlBrRjdMMDJXT3YvUjRYeUp2V3V5MmU3MzlCSkZ5ek96UUZMRWY0bUtza3J5SFFHZU9jK2NOMHE5S0s1CkNlcDFUUmUrVXZ2V0NweWFTOWdWOStRSjJYQks0VUVOdlVQcUlrTkpac24wRldZZSsxSWRNN3N0UXdIM3dPOWwKQzZPSlM1d1dmUVpFUmVJUWU2Rld3L3dTa2lWQ25sR2dEUGhNRXBmVStXMVdZWnk1ZTZjTnJmOG9XenFLOU9VbgplbnNnN2lRSDlBSjl2QUp0Kyt6RENWaTZEYXdoWDk5NHJHOXUKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
     },
     "kubeConfigPrivateKey": {
-      "metadata": {
-        "description": "The base 64 private key used by cli to communicate with the master"
-      },
-      "type": "securestring"
+      "value": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlKS0FJQkFBS0NBZ0VBeTNiUldvMG5jUkgxa2hhVnRvN1NsNjNrQTNxdGNHQVBhQklMYWdCZnBiNFdlR011CjNMYVdRS2ZNLzVHWXB5bWMyb0o4Um9YbFNSKzhwbUgrTlNmcmZIaWg4aW4wR09MRy9lYmdDTFF3TGs1d0ZsbjEKVXZjSkJJb2Z6VzFZczJGcytHc2t1VUJLZk80eEFLek1SakE2S09zSTgveGZzYlhFaTVJdkxTeVhLdXJPMW5zMwplUFRGNktXUGp2c2wyRmJFQ0JJQXlIVml1SENVd1dEZzl5VjdzbHgwaklBajRXdXUzRTdydzV0SWVmbG1LYlF6Cm5oVlluV0R2NmdGKzV3V2Z6U0lsNmQ1Z0tnVVJhT2M3OHJuNmxscTNhL0FLYTJKTVNpODR2REp4ZXU4c29uR0gKeXVzQ09ybENLZ1NCN2poTndkQXNYTUVNRUVhczUzbytwdEhkSStlL0xBS3VWeURZVkthZ0dDMnZ5RHpwUlUxVwp0dU83MWxNaXQzR2w5Mm1qK2RodnhzUVNnVzlWemU5ZlIyTVNyQ2dibUJRK1AyL2FqblFKNHJXOXgrSnlrZmsrCkxuanp3VGo5SXNvdk5FTDRacm5tNVJmSlJtQ1pvRVdTUkpRUkVzOUNpQzNkSTVTZEtZSVhEajYvaUl3TlVFU0EKMTBFckwxcDVoYTVBNlU1TE50bEw2UGV4R3RSTFdobWFaRDFlN29aZjE4Ny83dTRoSnpEWngyakc5S1FIaDB6cgpBSWRVZExGYjViT3Fzc0Z3RlFSMmNsMkNPVFRMczYxQmI5R2lSSVEyTG8wWk9lQ0pvN2ZZRjd5YW5XeFc4N0lkCmlGOStCdUgrd0JzNXNSelN0c3JPOTdZN01tSnkrQ2xmM0hoMmFpb215WU91ckJlTVB5YW5LMXpxazAwQ0F3RUEKQVFLQ0FnQUpySUNQdVo1aWRlUWpLZ2U4UWxZbytBK2JTcjNzVmVUbG9kWUJHRHR6K2ZHL2o1ZXV6cytlQzF4bgoybGhUdWxyRzJPVm54UDM5MkJCMEtMeVpjbWh6NXBoc2x5b1A5TmhaUWh6c3pRUnRielZOR3NIYlMvdVZ4NnR6CmJQdUdxOTh1Z0ltaWRUZ1ZjSTNMNW10Zit2TUk5d1BaOWVubTNTbVhLVUFzK2EzR1VKdTgvdWJJVFhzTGNMTysKckpwRUN2d1BGaXdMVytseHM0aWZHU2daR0NNbGU5ZmV4a2p1Y3R4QmhVOFlZYzIwWHZOSWtGVFQ4MWZmUTdpawplNlc0L2o5MjFXVFFGYzZrc05EL0Y5OTF6dm5uSkRFTVpNRmFFYlptNEkvbUFzLzZkRnkrN0g3MFd2QWtNcUsrCnRMQW96MnlEQm83VmFpaFVyY2VTeWZFb3BWbktRWUh0bTVDTHZzdk5KYi92MnZnMVZNblYxVnBQOFcyRzNjRTQKV1NkK0VITnhobVFJdjlYeGZDa0VHK2NDN2szYTBKWHZ3dDBCaEl4Zi9IT1BMUG05ckpmVjNQNW93UmVhZEptVwpUZmpVRERUbXBYYTBFY0NkZWl3MGczYnFXTkRkMVBTUXJsa0sydDBsYjNaNCt0ajNLeGRoczFuZkJmenpWUm1tClJZSnRJU091YmJBYWFNUllEbGdkT3dxaE11M2w4WUl6bFlxelRzeFJvQXJPRytYUVN6T1BzZ1NFMWtHYWNvVXQKdmgxQmdCWHZnZWM1VDIvbXlNZVVXUHBRRWRicXVGQVR1NG9CMnV0UlhLUm5hYmFQTWltOXM2Z0RUVmxoL0k0WgpIMXFETzJzeWdmOUZsdWlBa0tqV3N1cEY1TGFZcVVzYk02VU5xOFp2WDh6dDBpWGRnUUtDQVFFQThXV0ZGQkx0ClJoekZWT3VaNWFkVW9HRTgwR1ptQVdsVnh4SE9tcGorV0Vab1VQSjFob1M1emcrOWU1d0ZidDNVRXpmNXVnancKU0ZZYWFLZE1zVmd5ajh0MWJQQUE0MU1RSG03dnNxTElmOU0yWEViWDBTZUJsL2QyYWdaS1lVMVZWL0FjTXJlQwpUR1ErNDJENW8xcHNIVmlhWUlkZUlWV0JnTGJPMEEvNXN1MmxDbGlsZmVNZnNlK0ZBOXF5QlVxRFIvcE9DbVAvCjBBa2dyWGhsUXFKTFBsTm44TTJTb2VGQ1JzM1d4MllkMlg4dURzNk9LTDVPLy81ZERqOGsrRXdPcjlLT0RlaWUKYTNtMGkrTUlsVkdSbkRiZTZJeUVIUWNYTG0yS29jSDVQZ0JEU1dQV2xFb3MrWVFKTUJqU3E4UmU0TjNYcFVjWgplN2lTVEJHSmVrWjd5UUtDQVFFQTE4WFh4bFoxYVJDdHdRVTBHZ1VrQUlDV2hYaVc1eUdEUERQbVdEYkZ6b2ZNCmlBVElOc0tVaFNLTTdSa2YvMUN2ZGNXdllBOThZSXI3WHVUQXNkWVZuOEdIU0pZQTdxZjFjUHNRbjFlc3ZzdVIKY2VPZmVpdUd4ZDNBdVdxakltWGRNWFRMQ3h1c0ltNGhIelkxWEhldFdoOGUwNVFQcFpaNWJqZ1Y2UHArN0hnNQpTNTdNY1FpOHpZOGlEWXRzd0RTTmVEa1ZkSkN3NGxDRHNMSU1lK3ZMS1pPdDJwNVlUcjBVZ0VabGFPWk1LMXNVCit3U2c4cHlnTlpnQ0hrd2xzNkRETThvbm1BWEZjZ0liM2tHZjUxNnBLbXV0SjczTG43ejlCQkxnNWZIQlBleVYKUVlUTDF0ZkNtbkRMTEhhZmFHeVhTa28zK0FRNEt4bHA5WUhJRlBKVlpRS0NBUUJlaHJGdzVlUng0d3hHcjZkbwo3WGhQQVNTdU9wclJESzFoTVpEa3F1cFdLT1BxWnJjc3dNWjljVjV5aStyNHVmYTB1K09YUEs3U3RKek14RTVjCjE3dWM0VUFQTTRBMWhDNDRySnBDS2tvMis3ODZyU2NQcU5ldmFXQytMYzVzZ2JyY241SjdMYTdoT1JRRE45TXAKYTF3UXRjUmw3andtODNPdHNtZ1R3MTIwK2lmNWdETDFzNzJTa01kV2Rnbmwxb0xINmJVcmpuTDZ4TWcrQlhvcAplS0hjT3c3bGxhcElwNHVyYkNraGxkUTBlZi9RSG9RK1loOVBVUXloYW9xUWpEL29DNXhDeUFkWThLU0picExLCjNkRVdDY3FKNTVSSVJhR0hOYS9tbmExNjRPRjRXSmNMSkd5dUhFejR2NCtuWVZNQjNQejNwSHJQSHJ4eSt4OEoKZVpZNUFvSUJBUUNPbHZxaDRrN1NzS2Z5VDJyLzZ2ZkFzVGxIV01wNFVVZzFoNktvRndJZkd0VEo2a2NaRVBzdgpCQWNYUkN4Ri85OER1RERPRFUzSFN2RVU0NXlIcVE4L05KZ2ZHcW5oRFBPQXh4bFVBNDl2d24wS1F6OEhjQzR2CklmMFRTdW9sZUNWMVlsWXZzQWpQOC9GRmZBQkZhLzBOK2xUWHd4ZVgrTm1rUWNJUTVVRHRLZ0hLL0ZUa09iN3oKSkt4L1FPME1FMjZOelVObGRaeSs0akEwbTJUdW00TDFwZGNWQ3VFV241TWx0ZCtjTTl5UUppKzJObmZaL0RGUApXWFhFNmROY1lsZTlLTkdEZ0FUYjg1TFJESk1NUmgwS29IK2NMS3Vja3pxczc0RFoxQ284cnRSdnFMOC82Zk43Ck5pQzk4R0lsa3VWanZhcEE1eURyTW04NFE1eWlZd2FWQW9JQkFCV25xSXZiS21QRXhDemkrVXhidS9XVGs3MUkKSmVFQ1JWZkZZYXRkY1J3RU9FYkFwNzhoSUhrWXBxTmtlMEVaVVBpa1NaeE56elhwQzRwekhWdThCSUozQnlhUwpJbGdYSDRPYkdxb25XMS8yUEQ2VzczcU42Z1djYnlmN3BhVDYzT3dMeWpFbDdSQkJaTmpTS3NMVUhJSWFpRDFLCmNtWGxmWFJMWm14MndKLzkzNU5CSStPRmdOcVhTYlVpdHVoeDRTUEVaVnA1Y2tJSkEvY1pkQWtoSlFuakthQysKRzNkL2JlUkpIMVFhVS8wU0Z6azR5RHlSMzZzaFFXS1Y3RHFualV6YjBVMHo0TXBYMHA2VGtvTXhGL1BObHYrVwpwQ20zdVhIcmpwdll4c251ZVVaNU1Fd3A0QlJPcHJUN0FGOFY4LytYZHNxTjMvWE9ibDBzWlNlcUtrTT0KLS0tLS1FTkQgUlNBIFBSSVZBVEUgS0VZLS0tLS0K"
     },
     "kubeDNSServiceIP": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Kubernetes DNS IP"
-      },
-      "type": "string"
+      "value": "10.0.0.10"
     },
     "kubeServiceCidr": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Kubernetes service address space"
-      },
-      "type": "string"
+      "value": "10.0.0.0/16"
     },
     "kubernetesACIConnectorCPULimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "ACI Connector CPU Limit"
-      },
-      "type": "string"
+      "value": "50m"
     },
     "kubernetesACIConnectorCPURequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "ACI Connector CPU Requests"
-      },
-      "type": "string"
+      "value": "50m"
     },
     "kubernetesACIConnectorClientId": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Client id for ACI Connector."
-      },
-      "type": "string"
+      "value": ""
     },
     "kubernetesACIConnectorClientKey": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Client key for ACI Connector."
-      },
-      "type": "string"
+      "value": ""
     },
     "kubernetesACIConnectorMemoryLimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "ACI Connector Memory Limit"
-      },
-      "type": "string"
+      "value": "150Mi"
     },
     "kubernetesACIConnectorMemoryRequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "ACI Connector Memory Requests"
-      },
-      "type": "string"
+      "value": "150Mi"
     },
     "kubernetesACIConnectorNodeName": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Node name for ACI Connector."
-      },
-      "type": "string"
+      "value": "aci-connector"
     },
     "kubernetesACIConnectorOS": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "OS for ACI Connector."
-      },
-      "type": "string"
+      "value": "Linux"
     },
     "kubernetesACIConnectorRegion": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Region for ACI Connector."
-      },
-      "type": "string"
+      "value": "westus"
     },
     "kubernetesACIConnectorResourceGroup": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Resource group for ACI Connector."
-      },
-      "type": "string"
+      "value": ""
     },
     "kubernetesACIConnectorSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for ACI Connector."
-      },
-      "type": "string"
+      "value": "microsoft/"
     },
     "kubernetesACIConnectorSubscriptionId": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Subscription id for ACI Connector."
-      },
-      "type": "string"
+      "value": ""
     },
     "kubernetesACIConnectorTaint": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Taint for ACI Connector."
-      },
-      "type": "string"
+      "value": "azure.com/aci"
     },
     "kubernetesACIConnectorTenantId": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Tenant id for ACI Connector."
-      },
-      "type": "string"
+      "value": ""
     },
     "kubernetesAddonManagerSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for hyperkube."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/kube-addon-manager-amd64:v6.5"
     },
     "kubernetesAddonResizerSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for addon-resizer."
-      },
-      "type": "string"
-    },
-    "kubernetesCcmImageSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for cloud-controller-manager."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/addon-resizer:1.7"
     },
     "kubernetesDNSMasqSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for kube-dnsmasq-amd64."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/k8s-dns-dnsmasq-nanny-amd64:1.14.8"
     },
     "kubernetesDashboardCPULimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Dashboard CPU Limit."
-      },
-      "type": "string"
+      "value": "300m"
     },
     "kubernetesDashboardCPURequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Dashboard CPU Requests."
-      },
-      "type": "string"
+      "value": "300m"
     },
     "kubernetesDashboardMemoryLimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Dashboard Memory Limit."
-      },
-      "type": "string"
+      "value": "150Mi"
     },
     "kubernetesDashboardMemoryRequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Dashboard Memory Requests."
-      },
-      "type": "string"
+      "value": "150Mi"
     },
     "kubernetesDashboardSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for kubernetes-dashboard-amd64."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/kubernetes-dashboard-amd64:v1.8.2"
     },
     "kubernetesExecHealthzSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for exechealthz-amd64."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/exechealthz-amd64:1.2"
     },
     "kubernetesHeapsterSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for heapster."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/heapster-amd64:v1.5.0"
     },
     "kubernetesHyperkubeSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for hyperkube."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/hyperkube-amd64:v1.9.3"
     },
     "kubernetesKubeDNSSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for kubedns-amd64."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/k8s-dns-kube-dns-amd64:1.14.8"
     },
     "kubernetesNonMasqueradeCidr": {
-      "metadata": {
-        "description": "kubernetesNonMasqueradeCidr cluster subnet"
-      },
-      "type": "string"
+      "value": "10.0.0.0/8"
     },
     "kubernetesPodInfraContainerSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for pod infra."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/pause-amd64:3.1"
     },
     "kubernetesReschedulerCPULimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Rescheduler CPU Limit."
-      },
-      "type": "string"
+      "value": "10m"
     },
     "kubernetesReschedulerCPURequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Rescheduler CPU Requests."
-      },
-      "type": "string"
+      "value": "10m"
     },
     "kubernetesReschedulerMemoryLimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Rescheduler Memory Limit."
-      },
-      "type": "string"
+      "value": "100Mi"
     },
     "kubernetesReschedulerMemoryRequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Rescheduler Memory Requests."
-      },
-      "type": "string"
+      "value": "100Mi"
     },
     "kubernetesReschedulerSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for rescheduler."
-      },
-      "type": "string"
+      "value": "k8s-gcrio.azureedge.net/rescheduler:v0.3.1"
     },
     "kubernetesTillerCPULimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Helm Tiller CPU Limit."
-      },
-      "type": "string"
+      "value": "50m"
     },
     "kubernetesTillerCPURequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Helm Tiller CPU Requests."
-      },
-      "type": "string"
+      "value": "50m"
     },
     "kubernetesTillerMaxHistory": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Helm Tiller Max History to Store. '0' for no limit."
-      },
-      "type": "string"
+      "value": "0"
     },
     "kubernetesTillerMemoryLimit": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Helm Tiller Memory Limit."
-      },
-      "type": "string"
+      "value": "150Mi"
     },
     "kubernetesTillerMemoryRequests": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Helm Tiller Memory Requests."
-      },
-      "type": "string"
+      "value": "150Mi"
     },
     "kubernetesTillerSpec": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "The container spec for Helm Tiller."
-      },
-      "type": "string"
+      "value": "gcrio.azureedge.net/kubernetes-helm/tiller:v2.6.2"
     },
     "linuxAdminUsername": {
-      "metadata": {
-        "description": "User name for the Linux Virtual Machines (SSH or Password)."
-      },
-      "type": "string"
+      "value": "azureuser"
     },
     "location": {
-      "defaultValue": "",
-      "metadata": {
-        "description": "Sets the location for all resources in the cluster"
-      },
-      "type": "string"
+      "value": ""
     },
     "masterEndpointDNSNamePrefix": {
-      "metadata": {
-        "description": "Sets the Domain name label for the master IP Address.  The concatenation of the domain name label and the regional DNS zone make up the fully qualified domain name associated with the public IP address."
-      },
-      "type": "string"
-    },
-    "masterOffset": {
-      "allowedValues": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "defaultValue": 0,
-      "metadata": {
-        "description": "The offset into the master pool where to start creating master VMs.  This value can be from 0 to 4, but must be less than masterCount."
-      },
-      "type": "int"
+      "value": "architech-k8s"
     },
     "masterSubnet": {
-      "defaultValue": "10.240.0.0/12",
-      "metadata": {
-        "description": "Sets the subnet of the master node(s)."
-      },
-      "type": "string"
+      "value": "10.240.0.0/12"
     },
     "masterVMSize": {
-      "allowedValues": [
-        "Standard_A0",
-        "Standard_A1",
-        "Standard_A10",
-        "Standard_A11",
-        "Standard_A1_v2",
-        "Standard_A2",
-        "Standard_A2_v2",
-        "Standard_A2m_v2",
-        "Standard_A3",
-        "Standard_A4",
-        "Standard_A4_v2",
-        "Standard_A4m_v2",
-        "Standard_A5",
-        "Standard_A6",
-        "Standard_A7",
-        "Standard_A8",
-        "Standard_A8_v2",
-        "Standard_A8m_v2",
-        "Standard_A9",
-        "Standard_B1ms",
-        "Standard_B1s",
-        "Standard_B2ms",
-        "Standard_B2s",
-        "Standard_B4ms",
-        "Standard_B8ms",
-        "Standard_D1",
-        "Standard_D11",
-        "Standard_D11_v2",
-        "Standard_D11_v2_Promo",
-        "Standard_D12",
-        "Standard_D12_v2",
-        "Standard_D12_v2_Promo",
-        "Standard_D13",
-        "Standard_D13_v2",
-        "Standard_D13_v2_Promo",
-        "Standard_D14",
-        "Standard_D14_v2",
-        "Standard_D14_v2_Promo",
-        "Standard_D15_v2",
-        "Standard_D16_v3",
-        "Standard_D16s_v3",
-        "Standard_D1_v2",
-        "Standard_D2",
-        "Standard_D2_v2",
-        "Standard_D2_v2_Promo",
-        "Standard_D2_v3",
-        "Standard_D2s_v3",
-        "Standard_D3",
-        "Standard_D32_v3",
-        "Standard_D32s_v3",
-        "Standard_D3_v2",
-        "Standard_D3_v2_Promo",
-        "Standard_D4",
-        "Standard_D4_v2",
-        "Standard_D4_v2_Promo",
-        "Standard_D4_v3",
-        "Standard_D4s_v3",
-        "Standard_D5_v2",
-        "Standard_D5_v2_Promo",
-        "Standard_D64_v3",
-        "Standard_D64s_v3",
-        "Standard_D8_v3",
-        "Standard_D8s_v3",
-        "Standard_DS1",
-        "Standard_DS11",
-        "Standard_DS11_v2",
-        "Standard_DS11_v2_Promo",
-        "Standard_DS12",
-        "Standard_DS12_v2",
-        "Standard_DS12_v2_Promo",
-        "Standard_DS13",
-        "Standard_DS13-2_v2",
-        "Standard_DS13-4_v2",
-        "Standard_DS13_v2",
-        "Standard_DS13_v2_Promo",
-        "Standard_DS14",
-        "Standard_DS14-4_v2",
-        "Standard_DS14-8_v2",
-        "Standard_DS14_v2",
-        "Standard_DS14_v2_Promo",
-        "Standard_DS15_v2",
-        "Standard_DS1_v2",
-        "Standard_DS2",
-        "Standard_DS2_v2",
-        "Standard_DS2_v2_Promo",
-        "Standard_DS3",
-        "Standard_DS3_v2",
-        "Standard_DS3_v2_Promo",
-        "Standard_DS4",
-        "Standard_DS4_v2",
-        "Standard_DS4_v2_Promo",
-        "Standard_DS5_v2",
-        "Standard_DS5_v2_Promo",
-        "Standard_E16_v3",
-        "Standard_E16s_v3",
-        "Standard_E2_v3",
-        "Standard_E2s_v3",
-        "Standard_E32-16s_v3",
-        "Standard_E32-8s_v3",
-        "Standard_E32_v3",
-        "Standard_E32s_v3",
-        "Standard_E4_v3",
-        "Standard_E4s_v3",
-        "Standard_E64-16s_v3",
-        "Standard_E64-32s_v3",
-        "Standard_E64_v3",
-        "Standard_E64s_v3",
-        "Standard_E8_v3",
-        "Standard_E8s_v3",
-        "Standard_F1",
-        "Standard_F16",
-        "Standard_F16s",
-        "Standard_F16s_v2",
-        "Standard_F1s",
-        "Standard_F2",
-        "Standard_F2s",
-        "Standard_F2s_v2",
-        "Standard_F32s_v2",
-        "Standard_F4",
-        "Standard_F4s",
-        "Standard_F4s_v2",
-        "Standard_F64s_v2",
-        "Standard_F72s_v2",
-        "Standard_F8",
-        "Standard_F8s",
-        "Standard_F8s_v2",
-        "Standard_G1",
-        "Standard_G2",
-        "Standard_G3",
-        "Standard_G4",
-        "Standard_G5",
-        "Standard_GS1",
-        "Standard_GS2",
-        "Standard_GS3",
-        "Standard_GS4",
-        "Standard_GS4-4",
-        "Standard_GS4-8",
-        "Standard_GS5",
-        "Standard_GS5-16",
-        "Standard_GS5-8",
-        "Standard_H16",
-        "Standard_H16m",
-        "Standard_H16mr",
-        "Standard_H16r",
-        "Standard_H8",
-        "Standard_H8m",
-        "Standard_L16s",
-        "Standard_L32s",
-        "Standard_L4s",
-        "Standard_L8s",
-        "Standard_M128-32ms",
-        "Standard_M128-64ms",
-        "Standard_M128ms",
-        "Standard_M128s",
-        "Standard_M64-16ms",
-        "Standard_M64-32ms",
-        "Standard_M64ms",
-        "Standard_M64s",
-        "Standard_NC12",
-        "Standard_NC12s_v2",
-        "Standard_NC12s_v3",
-        "Standard_NC24",
-        "Standard_NC24r",
-        "Standard_NC24rs_v2",
-        "Standard_NC24rs_v3",
-        "Standard_NC24s_v2",
-        "Standard_NC24s_v3",
-        "Standard_NC6",
-        "Standard_NC6s_v2",
-        "Standard_NC6s_v3",
-        "Standard_ND12s",
-        "Standard_ND24rs",
-        "Standard_ND24s",
-        "Standard_ND6s",
-        "Standard_NV12",
-        "Standard_NV24",
-        "Standard_NV6"
-      ],
-      "metadata": {
-        "description": "The size of the Virtual Machine."
-      },
-      "type": "string"
+      "value": "Standard_D2_v2"
     },
     "maxPods": {
-      "defaultValue": 110,
-      "metadata": {
-        "description": "The maximum number of pods per node."
-      },
-      "type": "int"
-    },
-    "nameSuffix": {
-      "defaultValue": "43438754",
-      "metadata": {
-        "description": "A string hash of the master DNS name to uniquely identify the cluster."
-      },
-      "type": "string"
+      "value": 30
     },
     "networkPolicy": {
-      "allowedValues": [
-        "none",
-        "azure",
-        "calico"
-      ],
-      "defaultValue": "azure",
-      "metadata": {
-        "description": "The network policy enforcement to use (none|azure|calico)"
-      },
-      "type": "string"
+      "value": "azure"
     },
     "orchestratorName": {
-      "defaultValue": "",
-      "maxLength": 3,
-      "metadata": {
-        "description": "The orchestrator name used to identify the orchestrator.  This must be no more than 3 digits in length, otherwise it will exceed Windows Naming"
-      },
-      "minLength": 3,
-      "type": "string"
+      "value": "k8s"
     },
     "osImageOffer": {
-      "defaultValue": "UbuntuServer",
-      "metadata": {
-        "description": "Linux OS image type."
-      },
-      "type": "string"
+      "value": "UbuntuServer"
     },
     "osImagePublisher": {
-      "defaultValue": "Canonical",
-      "metadata": {
-        "description": "OS image publisher."
-      },
-      "type": "string"
+      "value": "Canonical"
     },
     "osImageSKU": {
-      "defaultValue": "16.04-LTS",
-      "metadata": {
-        "description": "OS image SKU."
-      },
-      "type": "string"
+      "value": "16.04-LTS"
     },
     "osImageVersion": {
-      "defaultValue": "16.04.201801260",
-      "metadata": {
-        "description": "OS image version."
-      },
-      "type": "string"
+      "value": "16.04.201801260"
     },
     "servicePrincipalClientId": {
-      "metadata": {
-        "description": "Client ID (used by cloudprovider)"
-      },
-      "type": "securestring"
+      "value": "0819dfe3-9328-48f3-8845-fffaadf62b09"
     },
     "servicePrincipalClientSecret": {
-      "metadata": {
-        "description": "The Service Principal Client Secret."
-      },
-      "type": "securestring"
+      "value": "299d888a-4a49-4b77-ba1d-8fe546cd90e9"
     },
     "sshRSAPublicKey": {
-      "metadata": {
-        "description": "SSH public key used for auth to all Linux machines.  Not Required.  If not set, you must provide a password key."
-      },
-      "type": "string"
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDSCXIHXghl14Ap8Vu2LVRLIfBub9t2lIzlJNDexadR81AjRUxQutOLDb8KtrVNQX7OMjnaHkuXGHa1EUChQDmvWCgahj6DQuV5/8Z9LkxsOzlnlrMf4ayCIghbKHKbwhe8JtxK0lmzoQa+rwFzPC3ccaBJPMonvKQObCrNLqkObWT0T9+2p19dC78ostK8HfkxETx1nII48szYBMeKx+7HmmN/fqRYLZ8FsetMEky678Cm40awsKF1qDljUhnLwefTspQ86bpNHeEQ1/XJCTvMVUosZOYhZZiuq8zJmwey7QXpoYvb7oIdz254UHAb6syDJVuPLLbcVoLhOFMv4lu70ZOKNkOggz3Od21Mj/SlO0JX3Z6AY5AZpZa+64oHduKVrBHnNjhixFqeiHUmS5Tal+cuk1EcLbx7/UmaOK7ujQ/ilB//vLddobB3S8X9+eAF7vpq7by4c9s1/7vjm4GzfxXgGjGnc7au2z9d9TWX/HVRaqrSONy/lQ8qidu4HLhF31uy1iLaKfYMHkaE9oqsdg7kOvZiotR0Zta07Y15uSAznuqKur55tpIdPO9C/7JNX9AxujLM08MSrF1fs45AUQnCTCcnFqC7dREUU41Qyon4n1pOgGCwzVSt6mt5PHuktSHDvvXHSuFaJ8N/kyXwhe1Eq3xUWVSDUyhVWaHhHQ==\n"
     },
     "targetEnvironment": {
-      "defaultValue": "AzurePublicCloud",
-      "metadata": {
-        "description": "The azure deploy environment. Currently support: AzurePublicCloud, AzureChinaCloud"
-      },
-      "type": "string"
-    },
-    "vnetCidr": {
-      "defaultValue": "10.0.0.0/8",
-      "metadata": {
-        "description": "Cluster vnet cidr"
-      },
-      "type": "string"
+      "value": "AzurePublicCloud"
     },
     "vnetCniLinuxPluginsURL": {
-      "defaultValue": "https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-latest.tgz",
-      "type": "string"
+      "value": "https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.2.tgz"
     },
     "vnetCniWindowsPluginsURL": {
-      "defaultValue": "https://acs-mirror.azureedge.net/cni/azure-vnet-cni-windows-amd64-latest.zip",
-      "type": "string"
+      "value": "https://acs-mirror.azureedge.net/cni/azure-vnet-cni-windows-amd64-v1.0.2.zip"
     }
-  },
+  } ,
   "variables": {
     "agentpool1AccountName": "[concat(variables('storageAccountBaseName'), 'agnt0')]",
     "agentpool1AvailabilitySet": "[concat('agentpool1-availabilitySet-', variables('nameSuffix'))]",
