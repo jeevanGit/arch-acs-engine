@@ -479,56 +479,56 @@
       "type": "securestring"
     },
     "cloudProviderBackoff": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "Enable cloudprovider backoff?"
       },
       "type": "string"
     },
     "cloudProviderBackoffDuration": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "If backoff enabled, how long until timeout"
       },
       "type": "string"
     },
     "cloudProviderBackoffExponent": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "If backoff enabled, retry exponent"
       },
       "type": "string"
     },
     "cloudProviderBackoffJitter": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "If backoff enabled, jitter factor between retries"
       },
       "type": "string"
     },
     "cloudProviderBackoffRetries": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "If backoff enabled, how many times to retry"
       },
       "type": "string"
     },
     "cloudProviderRatelimit": {
-      "defaultValue": "false",
+      "defaultValue": "",
       "metadata": {
         "description": "Enable cloudprovider rate limiting?"
       },
       "type": "string"
     },
     "cloudProviderRatelimitBucket": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "If rate limiting enabled, bucket size"
       },
       "type": "string"
     },
     "cloudProviderRatelimitQPS": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "If rate limiting enabled, target maximum QPS"
       },
@@ -550,7 +550,7 @@
       "type": "string"
     },
     "dockerBridgeCidr": {
-      "defaultValue": "172.17.0.1/16",
+      "defaultValue": "",
       "metadata": {
         "description": "Docker bridge network IP address and subnet"
       },
@@ -572,7 +572,7 @@
         "1.12.*",
         "1.11.*"
       ],
-      "defaultValue": "1.13.*",
+      "defaultValue": "",
       "metadata": {
         "description": "The docker engine version to install."
       },
@@ -591,14 +591,14 @@
       "type": "securestring"
     },
     "etcdDiskSizeGB": {
-      "defaultValue": "128",
+      "defaultValue": "",
       "metadata": {
         "description": "Size in GB to allocate for etcd volume"
       },
       "type": "string"
     },
     "etcdDownloadURLBase": {
-      "defaultValue": "https://acs-mirror.azureedge.net/github-coreos",
+      "defaultValue": "",
       "metadata": {
         "description": "etcd image base URL"
       },
@@ -629,7 +629,7 @@
       "type": "securestring"
     },
     "etcdVersion": {
-      "defaultValue": "3.2.11",
+      "defaultValue": "",
       "metadata": {
         "description": "etcd version"
       },
@@ -664,14 +664,14 @@
       "type": "int"
     },
     "generatorCode": {
-      "defaultValue": "acsengine",
+      "defaultValue": "",
       "metadata": {
         "description": "The generator code used to identify the generator"
       },
       "type": "string"
     },
     "kubeClusterCidr": {
-      "defaultValue": "10.240.0.0/12",
+      "defaultValue": "",
       "metadata": {
         "description": "Kubernetes cluster subnet"
       },
@@ -690,28 +690,28 @@
       "type": "securestring"
     },
     "kubeDNSServiceIP": {
-      "defaultValue": "10.0.0.10",
+      "defaultValue": "",
       "metadata": {
         "description": "Kubernetes DNS IP"
       },
       "type": "string"
     },
     "kubeServiceCidr": {
-      "defaultValue": "10.0.0.0/16",
+      "defaultValue": "",
       "metadata": {
         "description": "Kubernetes service address space"
       },
       "type": "string"
     },
     "kubernetesACIConnectorCPULimit": {
-      "defaultValue": "50m",
+      "defaultValue": "",
       "metadata": {
         "description": "ACI Connector CPU Limit"
       },
       "type": "string"
     },
     "kubernetesACIConnectorCPURequests": {
-      "defaultValue": "50m",
+      "defaultValue": "",
       "metadata": {
         "description": "ACI Connector CPU Requests"
       },
@@ -732,35 +732,35 @@
       "type": "string"
     },
     "kubernetesACIConnectorMemoryLimit": {
-      "defaultValue": "150Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "ACI Connector Memory Limit"
       },
       "type": "string"
     },
     "kubernetesACIConnectorMemoryRequests": {
-      "defaultValue": "150Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "ACI Connector Memory Requests"
       },
       "type": "string"
     },
     "kubernetesACIConnectorNodeName": {
-      "defaultValue": "aci-connector",
+      "defaultValue": "",
       "metadata": {
         "description": "Node name for ACI Connector."
       },
       "type": "string"
     },
     "kubernetesACIConnectorOS": {
-      "defaultValue": "Linux",
+      "defaultValue": "",
       "metadata": {
         "description": "OS for ACI Connector."
       },
       "type": "string"
     },
     "kubernetesACIConnectorRegion": {
-      "defaultValue": "eastus2",
+      "defaultValue": "",
       "metadata": {
         "description": "Region for ACI Connector."
       },
@@ -774,7 +774,7 @@
       "type": "string"
     },
     "kubernetesACIConnectorSpec": {
-      "defaultValue": "microsoft/",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for ACI Connector."
       },
@@ -788,7 +788,7 @@
       "type": "string"
     },
     "kubernetesACIConnectorTaint": {
-      "defaultValue": "azure.com/aci",
+      "defaultValue": "",
       "metadata": {
         "description": "Taint for ACI Connector."
       },
@@ -802,14 +802,14 @@
       "type": "string"
     },
     "kubernetesAddonManagerSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/kube-addon-manager-amd64:v6.5",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for hyperkube."
       },
       "type": "string"
     },
     "kubernetesAddonResizerSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/addon-resizer:1.7",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for addon-resizer."
       },
@@ -823,182 +823,179 @@
       "type": "string"
     },
     "kubernetesDNSMasqSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/k8s-dns-dnsmasq-nanny-amd64:1.14.8",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for kube-dnsmasq-amd64."
       },
       "type": "string"
     },
     "kubernetesDashboardCPULimit": {
-      "defaultValue": "300m",
+      "defaultValue": "",
       "metadata": {
         "description": "Dashboard CPU Limit."
       },
       "type": "string"
     },
     "kubernetesDashboardCPURequests": {
-      "defaultValue": "300m",
+      "defaultValue": "",
       "metadata": {
         "description": "Dashboard CPU Requests."
       },
       "type": "string"
     },
     "kubernetesDashboardMemoryLimit": {
-      "defaultValue": "150Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "Dashboard Memory Limit."
       },
       "type": "string"
     },
     "kubernetesDashboardMemoryRequests": {
-      "defaultValue": "150Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "Dashboard Memory Requests."
       },
       "type": "string"
     },
     "kubernetesDashboardSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/kubernetes-dashboard-amd64:v1.8.2",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for kubernetes-dashboard-amd64."
       },
       "type": "string"
     },
     "kubernetesExecHealthzSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/exechealthz-amd64:1.2",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for exechealthz-amd64."
       },
       "type": "string"
     },
     "kubernetesHeapsterSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/heapster-amd64:v1.5.0",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for heapster."
       },
       "type": "string"
     },
     "kubernetesHyperkubeSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/hyperkube-amd64:v1.9.3",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for hyperkube."
       },
       "type": "string"
     },
     "kubernetesKubeDNSSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/k8s-dns-kube-dns-amd64:1.14.8",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for kubedns-amd64."
       },
       "type": "string"
     },
     "kubernetesNonMasqueradeCidr": {
-      "defaultValue": "10.0.0.0/8",
       "metadata": {
         "description": "kubernetesNonMasqueradeCidr cluster subnet"
       },
       "type": "string"
     },
     "kubernetesPodInfraContainerSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/pause-amd64:3.1",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for pod infra."
       },
       "type": "string"
     },
     "kubernetesReschedulerCPULimit": {
-      "defaultValue": "10m",
+      "defaultValue": "",
       "metadata": {
         "description": "Rescheduler CPU Limit."
       },
       "type": "string"
     },
     "kubernetesReschedulerCPURequests": {
-      "defaultValue": "10m",
+      "defaultValue": "",
       "metadata": {
         "description": "Rescheduler CPU Requests."
       },
       "type": "string"
     },
     "kubernetesReschedulerMemoryLimit": {
-      "defaultValue": "100Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "Rescheduler Memory Limit."
       },
       "type": "string"
     },
     "kubernetesReschedulerMemoryRequests": {
-      "defaultValue": "100Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "Rescheduler Memory Requests."
       },
       "type": "string"
     },
     "kubernetesReschedulerSpec": {
-      "defaultValue": "k8s-gcrio.azureedge.net/rescheduler:v0.3.1",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for rescheduler."
       },
       "type": "string"
     },
     "kubernetesTillerCPULimit": {
-      "defaultValue": "50m",
+      "defaultValue": "",
       "metadata": {
         "description": "Helm Tiller CPU Limit."
       },
       "type": "string"
     },
     "kubernetesTillerCPURequests": {
-      "defaultValue": "50m",
+      "defaultValue": "",
       "metadata": {
         "description": "Helm Tiller CPU Requests."
       },
       "type": "string"
     },
     "kubernetesTillerMaxHistory": {
-      "defaultValue": "0",
+      "defaultValue": "",
       "metadata": {
         "description": "Helm Tiller Max History to Store. '0' for no limit."
       },
       "type": "string"
     },
     "kubernetesTillerMemoryLimit": {
-      "defaultValue": "150Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "Helm Tiller Memory Limit."
       },
       "type": "string"
     },
     "kubernetesTillerMemoryRequests": {
-      "defaultValue": "150Mi",
+      "defaultValue": "",
       "metadata": {
         "description": "Helm Tiller Memory Requests."
       },
       "type": "string"
     },
     "kubernetesTillerSpec": {
-      "defaultValue": "gcrio.azureedge.net/kubernetes-helm/tiller:v2.6.2",
+      "defaultValue": "",
       "metadata": {
         "description": "The container spec for Helm Tiller."
       },
       "type": "string"
     },
     "linuxAdminUsername": {
-      "defaultValue": "tdadmin"
       "metadata": {
         "description": "User name for the Linux Virtual Machines (SSH or Password)."
       },
       "type": "string"
     },
     "location": {
-      "defaultValue": "eastus2",
+      "defaultValue": "",
       "metadata": {
         "description": "Sets the location for all resources in the cluster"
       },
       "type": "string"
     },
     "masterEndpointDNSNamePrefix": {
-      "defaultValue": "tddndprefix"
       "metadata": {
         "description": "Sets the Domain name label for the master IP Address.  The concatenation of the domain name label and the regional DNS zone make up the fully qualified domain name associated with the public IP address."
       },
@@ -1208,8 +1205,7 @@
       "metadata": {
         "description": "The size of the Virtual Machine."
       },
-      "type": "string",
-      "defaultValue" : "Standard_D2_v2"
+      "type": "string"
     },
     "maxPods": {
       "defaultValue": 110,
@@ -1238,7 +1234,7 @@
       "type": "string"
     },
     "orchestratorName": {
-      "defaultValue": "k8s",
+      "defaultValue": "",
       "maxLength": 3,
       "metadata": {
         "description": "The orchestrator name used to identify the orchestrator.  This must be no more than 3 digits in length, otherwise it will exceed Windows Naming"
