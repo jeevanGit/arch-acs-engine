@@ -445,7 +445,7 @@
       "metadata": {
         "description": "The base 64 server certificate used on the master"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "apiServerPrivateKey": {
       "metadata": {
@@ -457,7 +457,7 @@
       "metadata": {
         "description": "The base 64 certificate authority certificate"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "caPrivateKey": {
       "defaultValue": "",
@@ -470,7 +470,7 @@
       "metadata": {
         "description": "The base 64 client certificate used to communicate with the master"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "clientPrivateKey": {
       "metadata": {
@@ -582,7 +582,7 @@
       "metadata": {
         "description": "The base 64 server certificate used on the master"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "etcdClientPrivateKey": {
       "metadata": {
@@ -608,7 +608,7 @@
       "metadata": {
         "description": "The base 64 server certificates used on the master"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "etcdPeerPrivateKey0": {
       "metadata": {
@@ -620,7 +620,7 @@
       "metadata": {
         "description": "The base 64 server certificate used on the master"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "etcdServerPrivateKey": {
       "metadata": {
@@ -681,7 +681,7 @@
       "metadata": {
         "description": "The base 64 certificate used by cli to communicate with the master"
       },
-      "type": "string"
+      "type": "securestring"
     },
     "kubeConfigPrivateKey": {
       "metadata": {
